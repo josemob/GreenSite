@@ -21,7 +21,6 @@ export default function Footer() {
           </div>
           <div className="col">
             <h5>Estudio</h5>
-            <Link href="/#proyectos">Proyectos</Link>
             <Link href="/#proceso">Cómo trabajamos</Link>
             <Link href="/blog">Blog</Link>
             <Link href="/#precios">Precios</Link>

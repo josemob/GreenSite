@@ -34,7 +34,6 @@ export default function Header() {
         <div className="nav-links">
           <Link href="/#servicios">Servicios</Link>
           <Link href="/#proceso">Cómo trabajamos</Link>
-          <Link href="/#proyectos">Proyectos</Link>
           <Link href="/#precios">Precios</Link>
           <Link href="/blog">Blog</Link>
         </div>

@@ -1,7 +1,7 @@
 import ContactForm from '../components/ContactForm'
-import Featured from '../components/Featured'
+// import Featured from '../components/Featured' // TEMP: portafolio oculto
 import HeroIntro from '../components/HeroIntro'
-import { getAllProjects } from '../lib/projects'
+// import { getAllProjects } from '../lib/projects' // TEMP: portafolio oculto
 
 export const metadata = {
   title: 'Webs y apps que venden',
@@ -10,7 +10,7 @@ export const metadata = {
 }
 
 export default function Home() {
-  const projects = getAllProjects()
+  // const projects = getAllProjects() // TEMP: portafolio oculto
   return (
     <>
       {/* HERO — full-bleed con imagen de fondo (/public/hero.jpg) */}
@@ -28,7 +28,7 @@ export default function Home() {
             </p>
             <div className="cta-row">
               <a href="#contacto" className="btn btn-primary btn-lg">Agenda una llamada gratis</a>
-              <a href="#proyectos" className="btn btn-outline btn-lg">Ver proyectos</a>
+              <a href="#servicios" className="btn btn-outline btn-lg">Ver servicios</a>
             </div>
             <div className="trust">
               <span><i className="dot" /> Diseño premium</span>
@@ -42,7 +42,7 @@ export default function Home() {
       {/* TRUST — stats en línea */}
       <div className="wrap">
         <div className="stats">
-          <div className="s"><b>+40</b><span>proyectos entregados</span></div>
+          <div className="s"><b>+10</b><span>proyectos entregados</span></div>
           <div className="s"><b>+30</b><span>clientes felices</span></div>
           <div className="s"><b>4.9★</b><span>satisfacción</span></div>
           <div className="s"><b>100%</b><span>a la medida</span></div>
@@ -128,19 +128,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PROYECTOS — portafolio */}
-      <section className="sec-band" id="proyectos">
-        <div className="wrap">
-          <div className="sec-head rv">
-            <div className="eyebrow">Portafolio</div>
-            <h2>Proyectos que ya lanzamos.</h2>
-            <p>Casos reales de negocios que dieron el salto. Míralos por dentro.</p>
-          </div>
-          <div className="rv">
-            <Featured projects={projects} />
-          </div>
-        </div>
-      </section>
+      {/* PROYECTOS (portafolio) — OCULTO temporalmente. Para restaurar: reactivar los imports de Featured y getAllProjects, la const projects, y volver a poner esta sección con <Featured projects={projects} />. */}
 
       {/* TESTIMONIOS — citas sin cajas */}
       <section className="sec-band" id="testimonios">
