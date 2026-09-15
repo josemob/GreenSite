@@ -12,7 +12,7 @@ export default function HeroIntro() {
     const v = vref.current
     if (v) {
       v.muted = true
-      v.loop = true
+      v.loop = false // se reproduce una vez y se congela en el último frame
       v.play().catch(() => {})
     }
 
