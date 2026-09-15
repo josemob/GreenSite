@@ -27,7 +27,7 @@ export default function Header() {
 
   return (
     <nav className={`site-nav${solid ? ' --solid' : ''}${hidden ? ' --hidden' : ''}`}>
-      <div className="wrap nav-in">
+      <div className="nav-in">
         <Link href="/" className="mark" aria-label="Greenpop Studio — inicio" />
         <div className="nav-links">
           <Link href="/#servicios">Servicios</Link>
