@@ -1,8 +1,32 @@
+'use client'
+
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
 
 export default function Header() {
+  const pathname = usePathname()
+  const isHome = pathname === '/'
+  const [solid, setSolid] = useState(!isHome)
+  const [hidden, setHidden] = useState(false)
+
+  useEffect(() => {
+    let lastY = window.scrollY
+    const onScroll = () => {
+      const y = window.scrollY
+      // ocultar al bajar (pasado un umbral), mostrar al subir
+      setHidden(y > lastY && y > 140)
+      // fondo sólido: en subpáginas siempre; en home al pasar el hero
+      setSolid(isHome ? y > window.innerHeight * 0.7 : true)
+      lastY = y
+    }
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [isHome])
+
   return (
-    <nav>
+    <nav className={`site-nav${solid ? ' --solid' : ''}${hidden ? ' --hidden' : ''}`}>
       <div className="wrap nav-in">
         <Link href="/" className="mark" aria-label="Greenpop Studio — inicio" />
         <div className="nav-links">

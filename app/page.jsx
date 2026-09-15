@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import ContactForm from '../components/ContactForm'
+import Featured from '../components/Featured'
 import { getAllProjects } from '../lib/projects'
 
 export const metadata = {
@@ -78,16 +78,18 @@ export default function Home() {
       {/* SERVICIOS — filas editoriales */}
       <section className="sec-band" id="servicios">
         <div className="wrap">
-          <div className="sec-head rv">
-            <div className="eyebrow">Lo que hacemos</div>
-            <h2>Elige lo que tu negocio necesita hoy.</h2>
-            <p>Desde una página simple hasta tu propia app. Te decimos con claridad qué te conviene, sin venderte de más.</p>
+          <div className="sv-head rv" style={{ marginBottom: 34 }}>
+            <div>
+              <div className="eyebrow" style={{ marginBottom: 12 }}>Lo que hacemos</div>
+              <h2 style={{ fontSize: 'clamp(28px,4.4vw,48px)' }}>Elige lo que tu negocio necesita hoy.</h2>
+            </div>
+            <a href="#contacto" className="btn btn-outline">Hablemos →</a>
           </div>
-          <div className="svc rv">
-            <a className="svc-row" href="#contacto"><div className="l"><h3>Landing Page</h3><span className="d">Una página enfocada en vender un producto o servicio.</span></div><div className="r"><span className="pr">Desde $350</span><span className="arw">→</span></div></a>
-            <a className="svc-row" href="#contacto"><div className="l"><h3>Web Corporativa</h3><span className="d">Tu web completa, que tú mismo puedes actualizar.</span></div><div className="r"><span className="pr">Desde $650</span><span className="arw">→</span></div></a>
-            <a className="svc-row" href="#contacto"><div className="l"><h3>Tienda / Portal</h3><span className="d">Vende por internet o dales un portal a tus clientes.</span></div><div className="r"><span className="pr">Desde $1.800</span><span className="arw">→</span></div></a>
-            <a className="svc-row" href="#contacto"><div className="l"><h3>App Móvil</h3><span className="d">Tu propia app para iPhone y Android.</span></div><div className="r"><span className="pr">Desde $2.500</span><span className="arw">→</span></div></a>
+          <div className="sv-list rv">
+            <a className="sv-row" href="#contacto"><span className="nm">Landing Page</span><span className="rt"><span className="pr">Desde $350</span><span className="arw">→</span></span></a>
+            <a className="sv-row" href="#contacto"><span className="nm">Web Corporativa</span><span className="rt"><span className="pr">Desde $650</span><span className="arw">→</span></span></a>
+            <a className="sv-row" href="#contacto"><span className="nm">Tienda / Portal</span><span className="rt"><span className="pr">Desde $1.800</span><span className="arw">→</span></span></a>
+            <a className="sv-row" href="#contacto"><span className="nm">App Móvil</span><span className="rt"><span className="pr">Desde $2.500</span><span className="arw">→</span></span></a>
           </div>
         </div>
       </section>
@@ -144,20 +146,8 @@ export default function Home() {
             <h2>Proyectos que ya lanzamos.</h2>
             <p>Casos reales de negocios que dieron el salto. Míralos por dentro.</p>
           </div>
-          <div className="portfolio rv">
-            {projects.map((p) => (
-              <Link key={p.slug} href={`/proyectos/${p.slug}`} className="proj">
-                <div className="proj-cover">
-                  <span className="dots"><i /><i /><i /></span>
-                  <span className="cv-name">{p.client}</span>
-                  <span className="cv-lemon" />
-                </div>
-                <div className="cat">{p.category}</div>
-                <h3>{p.title}</h3>
-                <p className="desc">{p.summary}</p>
-                <span className="go">Ver caso →</span>
-              </Link>
-            ))}
+          <div className="rv">
+            <Featured projects={projects} />
           </div>
         </div>
       </section>
