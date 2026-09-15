@@ -12,10 +12,10 @@ export default function Home() {
   const projects = getAllProjects()
   return (
     <>
-      {/* HERO */}
+      {/* HERO — full-bleed con imagen de fondo (/public/hero.jpg) */}
       <header className="hero" id="top">
-        <div className="wrap hero-grid">
-          <div>
+        <div className="wrap">
+          <div className="hero-in">
             <div className="eyebrow">Diseño y desarrollo web · Venezuela &amp; Latam</div>
             <h1 style={{ marginTop: 18 }}>
               Tu web debería traerte clientes. <span className="hl">Hacemos que así sea.</span>
@@ -32,18 +32,6 @@ export default function Home() {
               <span><i className="dot" /> Diseño premium</span>
               <span><i className="dot" /> Entrega rápida</span>
               <span><i className="dot" /> Soporte real</span>
-            </div>
-          </div>
-          <div className="mock">
-            <div className="lemon" aria-hidden="true" />
-            <div className="browser" role="img" aria-label="Ejemplo de sitio web premium diseñado por Greenpop Studio">
-              <div className="bar"><i /><i /><i /></div>
-              <div className="screen">
-                <div className="k">Tu marca, online</div>
-                <h5>Diseño que <b>convierte</b> visitas en clientes.</h5>
-                <div className="line m" /><div className="line" /><div className="line s" />
-                <span className="pill">Contáctanos →</span>
-              </div>
             </div>
           </div>
         </div>

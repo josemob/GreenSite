@@ -25,8 +25,10 @@ export default function Header() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [isHome])
 
+  const over = isHome && !solid
+
   return (
-    <nav className={`site-nav${solid ? ' --solid' : ''}${hidden ? ' --hidden' : ''}`}>
+    <nav className={`site-nav${solid ? ' --solid' : ''}${hidden ? ' --hidden' : ''}${over ? ' --over' : ''}`}>
       <div className="nav-in">
         <Link href="/" className="mark" aria-label="Greenpop Studio — inicio" />
         <div className="nav-links">
