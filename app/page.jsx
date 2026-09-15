@@ -1,5 +1,6 @@
 import ContactForm from '../components/ContactForm'
 import Featured from '../components/Featured'
+import HeroIntro from '../components/HeroIntro'
 import { getAllProjects } from '../lib/projects'
 
 export const metadata = {
@@ -14,6 +15,7 @@ export default function Home() {
     <>
       {/* HERO — full-bleed con imagen de fondo (/public/hero.jpg) */}
       <header className="hero" id="top">
+        <HeroIntro />
         <div className="wrap">
           <div className="hero-in">
             <div className="eyebrow">Diseño y desarrollo web · Venezuela &amp; Latam</div>
