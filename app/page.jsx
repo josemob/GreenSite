@@ -29,11 +29,6 @@ export default function Home() {
               <a href="#contacto" className="btn btn-primary btn-lg">Agenda una llamada gratis</a>
               <a href="#servicios" className="btn btn-outline btn-lg">Ver servicios</a>
             </div>
-            <div className="trust">
-              <span><i className="dot" /> Diseño premium</span>
-              <span><i className="dot" /> Entrega rápida</span>
-              <span><i className="dot" /> Soporte real</span>
-            </div>
           </div>
         </div>
       </header>
@@ -52,7 +47,6 @@ export default function Home() {
       <section className="sec-band problem">
         <div className="wrap">
           <div className="sec-head rv">
-            <div className="eyebrow">¿Te suena?</div>
             <h2>Tu web actual podría estar costándote clientes.</h2>
             <p>Si tu página no genera confianza ni contactos, no está trabajando para ti. Estas son las señales más comunes.</p>
           </div>
@@ -87,7 +81,6 @@ export default function Home() {
       <section className="sec-band" id="proceso">
         <div className="wrap">
           <div className="sec-head rv">
-            <div className="eyebrow">Cómo trabajamos</div>
             <h2>Un proceso claro, sin sorpresas.</h2>
             <p>Sabes qué pasa en cada paso y ves tu proyecto antes de que esté terminado.</p>
           </div>
@@ -115,7 +108,6 @@ export default function Home() {
       <section className="sec-band">
         <div className="wrap">
           <div className="sec-head rv">
-            <div className="eyebrow">Por qué Greenpop</div>
             <h2>Diseño de nivel, trato cercano.</h2>
           </div>
           <div className="why2 rv">
@@ -133,7 +125,6 @@ export default function Home() {
       <section className="sec-band" id="testimonios">
         <div className="wrap">
           <div className="sec-head rv">
-            <div className="eyebrow">Lo que dicen de nosotros</div>
             <h2>Negocios que ya dieron el paso.</h2>
           </div>
           <div className="quotes2 rv">
@@ -165,7 +156,6 @@ export default function Home() {
       <section className="sec-band">
         <div className="wrap">
           <div className="sec-head rv" style={{ textAlign: 'center', marginLeft: 'auto', marginRight: 'auto' }}>
-            <div className="eyebrow">Preguntas frecuentes</div>
             <h2>Lo que casi todos preguntan.</h2>
           </div>
           <div className="faq rv">
