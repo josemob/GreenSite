@@ -18,8 +18,7 @@ export default function Home() {
         <HeroIntro />
         <div className="wrap">
           <div className="hero-in">
-            <div className="eyebrow">Diseño y desarrollo web · Venezuela &amp; Latam</div>
-            <h1 style={{ marginTop: 18 }}>
+            <h1>
               Tu web debería traerte clientes. <span className="hl">Hacemos que así sea.</span>
             </h1>
             <p className="lede">
