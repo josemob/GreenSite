@@ -1,8 +1,5 @@
 import './globals.css'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import WhatsAppFab from '../components/WhatsAppFab'
-import ScrollReveal from '../components/ScrollReveal'
+import Chrome from '../components/Chrome'
 
 export const metadata = {
   metadataBase: new URL('https://greenpop.studio'),
@@ -11,13 +8,27 @@ export const metadata = {
     template: '%s — Greenpop Studio'
   },
   description:
-    'Diseñamos y desarrollamos páginas web, tiendas y apps premium que traen clientes. Pixel-Perfect. Motion-Ready. Venezuela & Latam.',
+    'Estudio de productos digitales en Venezuela y Latam. Diseñamos y desarrollamos landing pages, webs corporativas, tiendas online y apps que se ven premium y están hechas para vender. Pixel-Perfect. Motion-Ready.',
+  keywords: [
+    'diseño web Venezuela', 'desarrollo web Latam', 'landing page', 'tienda online',
+    'web corporativa', 'app móvil', 'diseño UX UI', 'páginas que venden', 'Greenpop Studio'
+  ],
+  authors: [{ name: 'José Mobresú' }],
+  creator: 'Greenpop Studio',
+  alternates: { canonical: '/' },
   icons: { icon: '/favicon.svg' },
   openGraph: {
     type: 'website',
+    siteName: 'Greenpop Studio',
     title: 'Greenpop Studio — Webs y apps que venden',
-    description: 'Diseño y desarrollo web premium, hecho para vender.',
+    description: 'Diseño y desarrollo web premium, hecho para vender. Venezuela & Latam.',
+    url: 'https://greenpop.studio',
     locale: 'es_ES'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Greenpop Studio — Webs y apps que venden',
+    description: 'Diseño y desarrollo web premium, hecho para vender. Venezuela & Latam.'
   }
 }
 
@@ -30,11 +41,7 @@ export default function RootLayout({ children }) {
     <html lang="es">
       <body>
         <div className="pg">
-          <Header />
-          {children}
-          <Footer />
-          <WhatsAppFab />
-          <ScrollReveal />
+          <Chrome>{children}</Chrome>
         </div>
       </body>
     </html>

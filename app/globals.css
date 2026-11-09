@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
 @font-face{font-family:'Outfit';font-weight:400;font-display:swap;src:url('/fonts/outfit-400.woff2') format('woff2');}
 @font-face{font-family:'Outfit';font-weight:500;font-display:swap;src:url('/fonts/outfit-500.woff2') format('woff2');}
 @font-face{font-family:'Outfit';font-weight:600;font-display:swap;src:url('/fonts/outfit-600.woff2') format('woff2');}
@@ -15,7 +15,7 @@
 }
 *{box-sizing:border-box;}
 body{margin:0;}
-.pg{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+.pg{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:clip;}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(18px,2.6vw,36px);}
 h1,h2,h3,h4{margin:0;font-weight:500;letter-spacing:-.025em;line-height:1.04;text-wrap:balance;}
 p{margin:0;}

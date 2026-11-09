@@ -1,0 +1,75 @@
+# Sveltia CMS — configuración de contenido de Greenpop Studio
+# Edita el blog y el portafolio directamente contra GitHub (repo josemob/GreenSite).
+# Los cambios se commitean a main y Cloudflare redepliega solo.
+
+backend:
+  name: github
+  repo: josemob/GreenSite
+  branch: main
+  # OAuth de Sveltia. Usa el MISMO worker de autenticación del sitio BLUR,
+  # o despliega sveltia-cms-auth en Cloudflare Workers y pon su URL aquí.
+  # Ej: base_url: https://tu-auth.workers.dev
+  base_url: https://REEMPLAZAR-auth.workers.dev
+
+# Carpeta para imágenes que subas desde el panel
+media_folder: public/uploads
+public_folder: /uploads
+
+# Idioma del panel y de los textos
+locale: es
+
+# Mensajes de commit en español
+backend_commit_messages:
+  create: 'Crea {{collection}} "{{slug}}"'
+  update: 'Actualiza {{collection}} "{{slug}}"'
+  delete: 'Elimina {{collection}} "{{slug}}"'
+  uploadMedia: 'Sube "{{path}}"'
+  deleteMedia: 'Elimina "{{path}}"'
+
+collections:
+  - name: blog
+    label: Blog
+    label_singular: Artículo
+    description: Artículos del blog de Greenpop Studio
+    folder: content/blog
+    create: true
+    slug: '{{slug}}'
+    extension: md
+    format: frontmatter
+    sortable_fields: [date, title]
+    fields:
+      - { name: title, label: Título, widget: string }
+      - { name: description, label: Descripción (SEO + resumen), widget: text }
+      - { name: date, label: Fecha, widget: datetime, format: 'YYYY-MM-DD', date_format: 'YYYY-MM-DD', time_format: false, picker_utc: true }
+      - { name: author, label: Autor, widget: string, default: 'José Mobresú' }
+      - { name: tags, label: Etiquetas, widget: list, default: [], required: false }
+      - { name: body, label: Contenido, widget: markdown }
+
+  - name: projects
+    label: Portafolio
+    label_singular: Proyecto
+    description: Casos del portafolio
+    folder: content/projects
+    create: true
+    slug: '{{slug}}'
+    extension: md
+    format: frontmatter
+    sortable_fields: [order, title]
+    fields:
+      - { name: title, label: Título, widget: string }
+      - { name: client, label: Cliente, widget: string }
+      - { name: category, label: Categoría, widget: string }
+      - { name: year, label: Año, widget: string }
+      - { name: order, label: Orden, widget: number, value_type: int, default: 1 }
+      - { name: url, label: URL del proyecto, widget: string, required: false }
+      - { name: behance, label: Behance, widget: string, required: false }
+      - { name: summary, label: Resumen, widget: text }
+      - { name: services, label: Servicios, widget: list }
+      - name: results
+        label: Resultados
+        widget: list
+        required: false
+        fields:
+          - { name: value, label: Valor, widget: string }
+          - { name: label, label: Etiqueta, widget: string }
+      - { name: body, label: Contenido, widget: markdown, required: false }
