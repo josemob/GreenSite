@@ -7,6 +7,9 @@ export default `<style data-gp-landing>
 @media(max-width:1180px){:root{--gpd:none;--gpm:flex;--gpfoot:1 / -1}}
 @media(min-width:1181px){.gpMobOnly{display:none!important}}
 @media(max-width:1180px){.gpDeskOnly{display:none!important}}
+@media(min-width:1181px){#gpHero{margin-top:32px}}
+@media(max-width:1180px){#gpHero .gpHeroWrap{position:static!important;height:auto!important;min-height:0!important;display:block!important}}
+@media(max-width:1180px){#gpHero .gpHeroVid{height:auto!important;width:100%!important}}
 #gp-root .gph1:hover{color:#0D0D0D!important;text-decoration:none!important}
 #gp-root .gph2:hover{color:#0D0D0D!important;text-decoration:none!important}
 #gp-root .gph3:hover{color:#0D0D0D!important;text-decoration:none!important}
@@ -79,7 +82,7 @@ export default `<style data-gp-landing>
 
 <!-- HERO -->
 <section id="gpHero" data-screen-label="Hero" style="position:relative;padding-top:0;padding-bottom:40px">
-<div style="position:sticky;top:0;height:100vh;display:flex;align-items:center">
+<div class="gpHeroWrap" style="position:sticky;top:0;height:100vh;display:flex;align-items:center">
 <div style="width:100%;max-width:1680px;margin:0 auto;padding:0 clamp(20px,2.2vw,40px);display:flex;flex-wrap:wrap;align-items:center;gap:40px">
   <div style="position:relative;z-index:2;flex:1 1 0%;min-width:300px;display:flex;flex-direction:column;justify-content:flex-start;gap:32px;padding:14px 0 8px;pointer-events:none">
     <div style="display:flex;flex-direction:column;gap:clamp(20px,2.4vw,36px)">
