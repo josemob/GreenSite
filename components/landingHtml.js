@@ -49,7 +49,7 @@ export default `<style data-gp-landing>
 <div id="gpNav" style="position:fixed;top:16px;left:16px;right:16px;z-index:50;border-radius:20px;background:rgba(255,255,255,0);transition:transform .4s cubic-bezier(.2,.8,.2,1),background-color .3s ease,backdrop-filter .3s ease;will-change:transform">
 <header style="max-width:1880px;margin:0 auto;padding:18px clamp(20px,2.2vw,40px);box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:32px">
   <div style="display:flex;align-items:center;gap:clamp(24px,4vw,64px);flex-wrap:wrap">
-    <a href="#top" style="display:flex;align-items:center"><img src="/assets/greenpop-black.svg" alt="Greenpop Studio" style="height:34px;width:auto;display:block"></a>
+    <a href="#gpHero" style="display:flex;align-items:center"><img src="/assets/greenpop-black.svg" alt="Greenpop Studio" style="height:34px;width:auto;display:block"></a>
     <nav data-nav-links="" style="position:relative;display:var(--gpd,flex);gap:clamp(4px,.8vw,16px);font-size:17px;font-weight:400;flex-wrap:wrap;white-space:nowrap">
       <span data-nav-pill="" style="position:absolute;left:0;top:0;width:0;height:0;border-radius:999px;background:#D4FF00;opacity:0;pointer-events:none;z-index:0;transition:transform .45s cubic-bezier(.3,1.3,.5,1),width .45s cubic-bezier(.3,1.3,.5,1),height .3s ease,opacity .25s ease"></span>
       <a class="gph1" href="#servicios" style="display:flex;align-items:center;gap:6px;color:#0D0D0D;position:relative;z-index:1;padding:8px 14px;border-radius:999px;text-decoration:none">Servicios <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></a>
@@ -64,7 +64,7 @@ export default `<style data-gp-landing>
 </div>
 
 <div id="gpMenu" style="position:fixed;inset:16px;z-index:80;border-radius:20px;overflow:hidden;background:rgba(13,13,13,.55);backdrop-filter:blur(28px) saturate(1.3);-webkit-backdrop-filter:blur(28px) saturate(1.3);border:1px solid rgba(255,255,255,.14);display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:24px;overflow-y:auto;padding:28px 24px 24px;box-sizing:border-box;opacity:0;transform:scale(.96);pointer-events:none;transition:opacity .35s ease,transform .45s cubic-bezier(.2,.8,.2,1);font-family:'Outfit',sans-serif">
-  <a href="#top" data-gp="menuClose" style="display:flex"><img src="/assets/greenpop-white.svg" alt="Greenpop Studio" style="height:48px;width:auto;display:block"></img></a>
+  <a href="#gpHero" data-gp="menuClose" style="display:flex"><img src="/assets/greenpop-white.svg" alt="Greenpop Studio" style="height:48px;width:auto;display:block"></img></a>
   <div style="display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center">
       <a class="gph6" href="#servicios" data-gp="menuClose" style="color:#FFFFFF;font-size:clamp(34px,9vw,44px);font-weight:600;letter-spacing:-.03em;line-height:1.1;text-decoration:none">Servicios</a>
       <a class="gph7" href="#proceso" data-gp="menuClose" style="color:#FFFFFF;font-size:clamp(34px,9vw,44px);font-weight:600;letter-spacing:-.03em;line-height:1.1;text-decoration:none">Cómo trabajamos</a>
@@ -78,7 +78,7 @@ export default `<style data-gp-landing>
 </div>
 
 <!-- HERO -->
-<section id="top" id="gpHero" data-screen-label="Hero" style="position:relative;padding-bottom:60px">
+<section id="gpHero" data-screen-label="Hero" style="position:relative;padding-top:0;padding-bottom:40px">
 <div style="position:sticky;top:0;height:100vh;display:flex;align-items:center">
 <div style="width:100%;max-width:1880px;margin:0 auto;padding:0 clamp(20px,2.2vw,40px);display:flex;flex-wrap:wrap;align-items:center;gap:40px">
   <div style="position:relative;z-index:2;flex:1 1 35%;min-width:300px;display:flex;flex-direction:column;justify-content:flex-start;gap:32px;padding:14px 0 8px;pointer-events:none">
@@ -98,11 +98,11 @@ export default `<style data-gp-landing>
       </div>
     </div>
   </div>
-  <div style="position:relative;z-index:1;flex:0 1 min(60%, calc(100vh - 48px));min-width:min(100%,340px);aspect-ratio:1/1;border-radius:clamp(24px,2.6vw,44px);overflow:hidden;background:#DCDCD3">
+  <div style="position:relative;z-index:1;flex:0 1 min(54%, calc(100svh - 200px));min-width:min(100%,340px);aspect-ratio:1/1;border-radius:clamp(24px,2.6vw,44px);overflow:hidden;background:#DCDCD3">
     <video id="gpHeroVideo" autoplay="" loop="" muted playsinline="" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>
     <div style="position:absolute;top:22px;right:22px;display:flex;align-items:center;gap:10px;padding:10px 18px;border-radius:999px;border:1px solid rgba(13,13,13,.18);background:rgba(243,242,242,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#2A2A2A;pointer-events:none;white-space:nowrap">
       <span style="width:8px;height:8px;border-radius:999px;background:#D4FF00;box-shadow:0 0 0 3px rgba(13,13,13,.12)"></span>
-      <strong id="gpClock" style="font-weight:600;color:#0D0D0D;font-variant-numeric:tabular-nums">09:24</strong>
+      <strong id="gpClock" style="font-weight:600;color:#0D0D0D;font-variant-numeric:tabular-nums">09:43</strong>
       <span id="gpClockLabel">Mañana</span>
     </div>
   </div>

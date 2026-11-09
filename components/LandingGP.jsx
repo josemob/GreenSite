@@ -70,8 +70,11 @@ export default function LandingGP({ html }) {
         on(links, 'mouseleave', () => { pill.style.opacity = '0'; shown = false })
       }
       const spacer = nav.previousElementSibling
-      const fit = () => { if (spacer && spacer.hasAttribute('data-nav-spacer')) spacer.style.height = (nav.offsetHeight + 40) + 'px' }
-      const navRO = new ResizeObserver(fit); navRO.observe(nav); D.push(() => navRO.disconnect()); fit()
+      // escritorio: hero full-bleed centrado bajo el nav (spacer 0).
+      // móvil: hero apilado -> el spacer empuja el título bajo el nav.
+      const fit = () => { if (spacer && spacer.hasAttribute('data-nav-spacer')) spacer.style.height = (window.innerWidth < 860 ? nav.offsetHeight + 16 : 0) + 'px' }
+      const navRO = new ResizeObserver(fit); navRO.observe(nav); D.push(() => navRO.disconnect())
+      on(window, 'resize', fit); fit()
       upd()
     }
 
