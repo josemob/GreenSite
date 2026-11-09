@@ -102,7 +102,7 @@ export default `<style data-gp-landing>
     <video id="gpHeroVideo" autoplay="" loop="" muted playsinline="" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>
     <div style="position:absolute;top:22px;right:22px;display:flex;align-items:center;gap:10px;padding:10px 18px;border-radius:999px;border:1px solid rgba(13,13,13,.18);background:rgba(243,242,242,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#2A2A2A;pointer-events:none;white-space:nowrap">
       <span style="width:8px;height:8px;border-radius:999px;background:#D4FF00;box-shadow:0 0 0 3px rgba(13,13,13,.12)"></span>
-      <strong id="gpClock" style="font-weight:600;color:#0D0D0D;font-variant-numeric:tabular-nums">09:12</strong>
+      <strong id="gpClock" style="font-weight:600;color:#0D0D0D;font-variant-numeric:tabular-nums">09:24</strong>
       <span id="gpClockLabel">Mañana</span>
     </div>
   </div>
@@ -543,80 +543,7 @@ export default `<style data-gp-landing>
     </div>
     <a class="gph24" href="/blog" style="display:flex;align-items:center;gap:12px;background:#0D0D0D;color:#F3F2F2;padding:14px 24px;border-radius:999px;font-size:16px;font-weight:600;text-decoration:none">Ver todos los artículos <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></a>
   </div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(16px,2vw,28px)">
-    
-      <a href="/blog" class="gpBlogCard gph25" style="display:flex;flex-direction:column;gap:16px;color:#0D0D0D;text-decoration:none">
-        <div style="position:relative;aspect-ratio:1/1;border-radius:24px;overflow:hidden;background:#DCDCD3">
-          <div style="position:absolute;inset:0;background-image:url(/assets/svc-corp.jpg?v=2);background-size:cover;background-position:center;filter:blur(0px);transform:scale(1);transition:filter .45s ease,transform .6s cubic-bezier(.2,.8,.2,1)"></div>
-          <div style="position:absolute;inset:0;background:rgba(243,242,242,0);transition:background .45s ease"></div>
-          <span style="position:absolute;top:16px;left:16px;font-size:13px;font-weight:500;color:#FFFFFF;padding:5px 12px;border-radius:999px;background:rgba(13,13,13,.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">Conversión</span>
-          <div style="position:absolute;left:0;right:0;bottom:0;height:75%;pointer-events:none;opacity:0;transition:opacity .5s ease">
-            <div style="position:absolute;inset:0;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);-webkit-mask-image:linear-gradient(to top,#000 0%,transparent 100%);mask-image:linear-gradient(to top,#000 0%,transparent 100%)"></div>
-            <div style="position:absolute;inset:0;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);-webkit-mask-image:linear-gradient(to top,#000 0%,#000 30%,transparent 70%);mask-image:linear-gradient(to top,#000 0%,#000 30%,transparent 70%)"></div>
-            <div style="position:absolute;inset:0;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);-webkit-mask-image:linear-gradient(to top,#000 0%,#000 25%,transparent 50%);mask-image:linear-gradient(to top,#000 0%,#000 25%,transparent 50%)"></div>
-            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(13,13,13,.72) 0%,rgba(13,13,13,.4) 45%,rgba(13,13,13,0) 100%)"></div>
-          </div>
-          <div style="position:absolute;left:clamp(18px,2vw,24px);right:clamp(18px,2vw,24px);bottom:clamp(18px,2vw,24px);display:flex;flex-direction:column;gap:14px;color:#FFFFFF;pointer-events:none;opacity:0;filter:blur(10px);transform:translateY(14px);transition:opacity .5s ease .05s,filter .6s ease .05s,transform .6s cubic-bezier(.2,.8,.2,1) .05s">
-            <div style="font-size:16px;line-height:1.5;text-wrap:pretty">Botones que nadie ve, formularios eternos, páginas lentas. Lo que espanta a tus visitantes y cómo resolverlo en una tarde.</div>
-            <div style="display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600">Leer artículo <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></div>
-          </div>
-        </div>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
-          <span style="display:flex;align-items:center;gap:8px;font-size:13px;color:#3A3836;padding:4px 12px 4px 4px;border-radius:999px;background:#FFFFFF"><span style="width:22px;height:22px;border-radius:999px;background:#0D0D0D;color:#D4FF00;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center">JM</span>José Mobresú</span>
-          <span style="display:flex;align-items:center;gap:6px;font-size:13px;color:#3A3836;padding:4px 12px;border-radius:999px;background:#FFFFFF"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>Noviembre 2026</span>
-        </div>
-        <div style="font-size:clamp(19px,1.5vw,22px);font-weight:400;letter-spacing:-.015em;line-height:1.25;text-wrap:pretty;transition:font-weight .3s ease">7 errores en tu web que te están costando clientes (y cómo arreglarlos)</div>
-      </a>
-    
-
-      <a href="/blog" class="gpBlogCard gph25" style="display:flex;flex-direction:column;gap:16px;color:#0D0D0D;text-decoration:none">
-        <div style="position:relative;aspect-ratio:1/1;border-radius:24px;overflow:hidden;background:#DCDCD3">
-          <div style="position:absolute;inset:0;background-image:url(/assets/svc-tienda.jpg?v=2);background-size:cover;background-position:center;filter:blur(0px);transform:scale(1);transition:filter .45s ease,transform .6s cubic-bezier(.2,.8,.2,1)"></div>
-          <div style="position:absolute;inset:0;background:rgba(243,242,242,0);transition:background .45s ease"></div>
-          <span style="position:absolute;top:16px;left:16px;font-size:13px;font-weight:500;color:#FFFFFF;padding:5px 12px;border-radius:999px;background:rgba(13,13,13,.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">E-commerce</span>
-          <div style="position:absolute;left:0;right:0;bottom:0;height:75%;pointer-events:none;opacity:0;transition:opacity .5s ease">
-            <div style="position:absolute;inset:0;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);-webkit-mask-image:linear-gradient(to top,#000 0%,transparent 100%);mask-image:linear-gradient(to top,#000 0%,transparent 100%)"></div>
-            <div style="position:absolute;inset:0;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);-webkit-mask-image:linear-gradient(to top,#000 0%,#000 30%,transparent 70%);mask-image:linear-gradient(to top,#000 0%,#000 30%,transparent 70%)"></div>
-            <div style="position:absolute;inset:0;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);-webkit-mask-image:linear-gradient(to top,#000 0%,#000 25%,transparent 50%);mask-image:linear-gradient(to top,#000 0%,#000 25%,transparent 50%)"></div>
-            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(13,13,13,.72) 0%,rgba(13,13,13,.4) 45%,rgba(13,13,13,0) 100%)"></div>
-          </div>
-          <div style="position:absolute;left:clamp(18px,2vw,24px);right:clamp(18px,2vw,24px);bottom:clamp(18px,2vw,24px);display:flex;flex-direction:column;gap:14px;color:#FFFFFF;pointer-events:none;opacity:0;filter:blur(10px);transform:translateY(14px);transition:opacity .5s ease .05s,filter .6s ease .05s,transform .6s cubic-bezier(.2,.8,.2,1) .05s">
-            <div style="font-size:16px;line-height:1.5;text-wrap:pretty">Vender por DM funciona hasta que no. Te explicamos cuándo dar el salto a una tienda propia y cuánto cambia tu operación.</div>
-            <div style="display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600">Leer artículo <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></div>
-          </div>
-        </div>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
-          <span style="display:flex;align-items:center;gap:8px;font-size:13px;color:#3A3836;padding:4px 12px 4px 4px;border-radius:999px;background:#FFFFFF"><span style="width:22px;height:22px;border-radius:999px;background:#0D0D0D;color:#D4FF00;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center">JM</span>José Mobresú</span>
-          <span style="display:flex;align-items:center;gap:6px;font-size:13px;color:#3A3836;padding:4px 12px;border-radius:999px;background:#FFFFFF"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>Octubre 2026</span>
-        </div>
-        <div style="font-size:clamp(19px,1.5vw,22px);font-weight:400;letter-spacing:-.015em;line-height:1.25;text-wrap:pretty;transition:font-weight .3s ease">Tienda online o Instagram: qué le conviene a tu negocio en 2027</div>
-      </a>
-    
-
-      <a href="/blog" class="gpBlogCard gph25" style="display:flex;flex-direction:column;gap:16px;color:#0D0D0D;text-decoration:none">
-        <div style="position:relative;aspect-ratio:1/1;border-radius:24px;overflow:hidden;background:#DCDCD3">
-          <div style="position:absolute;inset:0;background-image:url(/assets/svc-landing-2.jpg);background-size:cover;background-position:center;filter:blur(0px);transform:scale(1);transition:filter .45s ease,transform .6s cubic-bezier(.2,.8,.2,1)"></div>
-          <div style="position:absolute;inset:0;background:rgba(243,242,242,0);transition:background .45s ease"></div>
-          <span style="position:absolute;top:16px;left:16px;font-size:13px;font-weight:500;color:#FFFFFF;padding:5px 12px;border-radius:999px;background:rgba(13,13,13,.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">Guías</span>
-          <div style="position:absolute;left:0;right:0;bottom:0;height:75%;pointer-events:none;opacity:0;transition:opacity .5s ease">
-            <div style="position:absolute;inset:0;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);-webkit-mask-image:linear-gradient(to top,#000 0%,transparent 100%);mask-image:linear-gradient(to top,#000 0%,transparent 100%)"></div>
-            <div style="position:absolute;inset:0;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);-webkit-mask-image:linear-gradient(to top,#000 0%,#000 30%,transparent 70%);mask-image:linear-gradient(to top,#000 0%,#000 30%,transparent 70%)"></div>
-            <div style="position:absolute;inset:0;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);-webkit-mask-image:linear-gradient(to top,#000 0%,#000 25%,transparent 50%);mask-image:linear-gradient(to top,#000 0%,#000 25%,transparent 50%)"></div>
-            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(13,13,13,.72) 0%,rgba(13,13,13,.4) 45%,rgba(13,13,13,0) 100%)"></div>
-          </div>
-          <div style="position:absolute;left:clamp(18px,2vw,24px);right:clamp(18px,2vw,24px);bottom:clamp(18px,2vw,24px);display:flex;flex-direction:column;gap:14px;color:#FFFFFF;pointer-events:none;opacity:0;filter:blur(10px);transform:translateY(14px);transition:opacity .5s ease .05s,filter .6s ease .05s,transform .6s cubic-bezier(.2,.8,.2,1) .05s">
-            <div style="font-size:16px;line-height:1.5;text-wrap:pretty">Precios reales del mercado, qué incluye cada rango y las preguntas que debes hacer antes de pagarle a cualquiera.</div>
-            <div style="display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600">Leer artículo <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></div>
-          </div>
-        </div>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
-          <span style="display:flex;align-items:center;gap:8px;font-size:13px;color:#3A3836;padding:4px 12px 4px 4px;border-radius:999px;background:#FFFFFF"><span style="width:22px;height:22px;border-radius:999px;background:#0D0D0D;color:#D4FF00;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center">JM</span>José Mobresú</span>
-          <span style="display:flex;align-items:center;gap:6px;font-size:13px;color:#3A3836;padding:4px 12px;border-radius:999px;background:#FFFFFF"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>Septiembre 2026</span>
-        </div>
-        <div style="font-size:clamp(19px,1.5vw,22px);font-weight:400;letter-spacing:-.015em;line-height:1.25;text-wrap:pretty;transition:font-weight .3s ease">Cuánto cuesta una web en Venezuela y qué deberías exigir por tu dinero</div>
-      </a>
-    
-  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(16px,2vw,28px)"><!--BLOG_POSTS--></div>
 </section>
 
 <!-- FAQ -->

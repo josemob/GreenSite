@@ -1,6 +1,7 @@
 import LandingGP from '../components/LandingGP'
 import LANDING_HTML from '../components/landingHtml'
 import { getAllProjects } from '../lib/projects'
+import { getAllPosts, fmtMonthYear } from '../lib/posts'
 import { coverFor } from '../lib/dcEngine'
 
 export const metadata = {
@@ -64,10 +65,40 @@ export default function Home() {
     </a>`
   }).join('')
 
+  // ---- sección Blog del home: 3 posts reales, cada tarjeta enlaza a su artículo ----
+  const blogCards = getAllPosts().slice(0, 3).map((p, i) => {
+    const cat = (p.tags && p.tags[0]) || 'Artículo'
+    const img = coverFor(p.cover, cat, i)
+    return `
+    <a href="/blog/${p.slug}" class="gpBlogCard" style="display:flex;flex-direction:column;gap:16px;color:#0D0D0D;text-decoration:none">
+      <div style="position:relative;aspect-ratio:1/1;border-radius:24px;overflow:hidden;background:#DCDCD3">
+        <div style="position:absolute;inset:0;background-image:url(${img});background-size:cover;background-position:center;filter:blur(0px);transform:scale(1);transition:filter .45s ease,transform .6s cubic-bezier(.2,.8,.2,1)"></div>
+        <div style="position:absolute;inset:0;background:rgba(243,242,242,0);transition:background .45s ease"></div>
+        <span style="position:absolute;top:16px;left:16px;font-size:13px;font-weight:500;color:#FFFFFF;padding:5px 12px;border-radius:999px;background:rgba(13,13,13,.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">${esc(cat)}</span>
+        <div style="position:absolute;left:0;right:0;bottom:0;height:75%;pointer-events:none;opacity:0;transition:opacity .5s ease">
+          <div style="position:absolute;inset:0;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);-webkit-mask-image:linear-gradient(to top,#000 0%,transparent 100%);mask-image:linear-gradient(to top,#000 0%,transparent 100%)"></div>
+          <div style="position:absolute;inset:0;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);-webkit-mask-image:linear-gradient(to top,#000 0%,#000 30%,transparent 70%);mask-image:linear-gradient(to top,#000 0%,#000 30%,transparent 70%)"></div>
+          <div style="position:absolute;inset:0;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);-webkit-mask-image:linear-gradient(to top,#000 0%,#000 25%,transparent 50%);mask-image:linear-gradient(to top,#000 0%,#000 25%,transparent 50%)"></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(13,13,13,.72) 0%,rgba(13,13,13,.4) 45%,rgba(13,13,13,0) 100%)"></div>
+        </div>
+        <div style="position:absolute;left:clamp(18px,2vw,24px);right:clamp(18px,2vw,24px);bottom:clamp(18px,2vw,24px);display:flex;flex-direction:column;gap:14px;color:#FFFFFF;pointer-events:none;opacity:0;filter:blur(10px);transform:translateY(14px);transition:opacity .5s ease .05s,filter .6s ease .05s,transform .6s cubic-bezier(.2,.8,.2,1) .05s">
+          <div style="font-size:16px;line-height:1.5;text-wrap:pretty">${esc(p.description)}</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600">Leer artículo <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></div>
+        </div>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+        <span style="display:flex;align-items:center;gap:8px;font-size:13px;color:#3A3836;padding:4px 12px 4px 4px;border-radius:999px;background:#FFFFFF"><span style="width:22px;height:22px;border-radius:999px;background:#0D0D0D;color:#D4FF00;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center">JM</span>${esc(p.author || 'José Mobresú')}</span>
+        <span style="display:flex;align-items:center;gap:6px;font-size:13px;color:#3A3836;padding:4px 12px;border-radius:999px;background:#FFFFFF"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>${esc(fmtMonthYear(p.date))}</span>
+      </div>
+      <div style="font-size:clamp(19px,1.5vw,22px);font-weight:400;letter-spacing:-.015em;line-height:1.25;text-wrap:pretty;transition:font-weight .3s ease">${esc(p.title)}</div>
+    </a>`
+  }).join('')
+
   const html = LANDING_HTML
     .replace('<!--PF_NAMES-->', names)
     .replace('<!--PF_TRACK-->', track)
     .replace('<!--PF_MOBILE-->', mobile)
+    .replace('<!--BLOG_POSTS-->', blogCards)
 
   return <LandingGP html={html} />
 }
