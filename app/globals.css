@@ -477,3 +477,11 @@ footer{border-top:1px solid var(--border);padding:44px 0 40px;}
 .gp-prose img{width:100%;border-radius:24px;margin:26px 0;display:block;}
 .gp-prose hr{border:0;height:2px;background:rgba(13,13,13,.12);margin:36px 0;}
 .gp-prose code{background:rgba(13,13,13,.06);padding:2px 6px;border-radius:6px;font-size:.9em;}
+
+/* Prosa en columnas (reto/solución del caso de proyecto) */
+.gp-colprose{font-size:clamp(17px,1.3vw,19px);line-height:1.7;color:#2A2A2A;}
+.gp-colprose p{margin:0 0 14px;}
+.gp-colprose > :last-child{margin-bottom:0;}
+.gp-colprose ul,.gp-colprose ol{margin:8px 0 14px;padding-left:20px;display:flex;flex-direction:column;gap:8px;}
+.gp-colprose strong{font-weight:700;color:#0D0D0D;}
+.gp-colprose a{color:#0D0D0D;text-decoration:underline;text-decoration-color:#D4FF00;text-underline-offset:3px;}

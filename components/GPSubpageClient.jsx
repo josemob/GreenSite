@@ -127,7 +127,26 @@ export default function GPSubpageClient() {
       on(btn, 'click', () => { $$('.gpHiddenMore').forEach(c => c.classList.remove('gpHiddenMore')); btn.style.display = 'none' })
     }
 
-    initNav(); initReveal(); initMenu(); initCardHover(); initFilter(); initLoadMore()
+    // ---- medidores (gauges del caso de proyecto) ----
+    function initGauges() {
+      const rings = $$('circle[data-gauge]'); if (!rings.length) return
+      const C = 326.73 // 2π·52
+      const run = (ring) => {
+        const target = +ring.getAttribute('data-gauge')
+        ring.style.transition = 'stroke-dashoffset 1.3s cubic-bezier(.2,.8,.2,1)'
+        ring.style.strokeDashoffset = C * (1 - target / 100)
+        const svg = ring.closest('svg'); const num = svg && svg.nextElementSibling
+        if (num && num.hasAttribute('data-gauge-n')) {
+          const t = +num.getAttribute('data-gauge-n'), t0 = performance.now(), DUR = 1300
+          const tick = (now) => { const p = Math.min(1, (now - t0) / DUR); num.textContent = Math.round(t * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(tick) }
+          requestAnimationFrame(tick)
+        }
+      }
+      const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { run(e.target); io.unobserve(e.target) } }), { threshold: 0.4 })
+      rings.forEach((r) => io.observe(r)); D.push(() => io.disconnect())
+    }
+
+    initNav(); initReveal(); initMenu(); initCardHover(); initFilter(); initLoadMore(); initGauges()
     return () => { D.forEach(fn => { try { fn() } catch (e) {} }); document.documentElement.style.overflow = '' }
   }, [])
 

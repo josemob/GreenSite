@@ -23,8 +23,9 @@ export async function generateMetadata({ params }) {
 
 const WA = 'https://wa.me/584128172712?text=' + encodeURIComponent('Hola Greenpop, vi un caso del portafolio y quiero algo así.')
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+const stripTags = (s) => String(s).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()
 
-function twoTone(title, size) {
+function twoTone(title) {
   const words = title.split(/\s+/)
   const cut = Math.max(1, Math.min(words.length - 1, Math.ceil(words.length * 0.55)))
   const w1 = words.slice(0, cut).map((w) => `<span data-rv="">${esc(w)}</span>`).join('')
@@ -36,6 +37,15 @@ function twoTone(title, size) {
     (rest.length ? `<span style="display:flex;flex-wrap:wrap;column-gap:.22em;font-weight:300">${w2}</span>` : '')
 }
 
+// separa la narrativa markdown por secciones (## El reto, ## La solución, ## El resultado)
+function sections(html) {
+  const out = {}
+  const re = /<h2>([\s\S]*?)<\/h2>([\s\S]*?)(?=<h2>|$)/g
+  let m
+  while ((m = re.exec(html))) out[stripTags(m[1]).toLowerCase()] = m[2].trim()
+  return out
+}
+
 const ARROW = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg>'
 
 export default async function ProjectPage({ params }) {
@@ -45,8 +55,18 @@ export default async function ProjectPage({ params }) {
 
   const cover = coverFor(p.cover, p.category, 0)
   const topResult = (p.results && p.results[0] && p.results[0].value) || '—'
+  const initials = (p.client || p.title).split(/\s+/).slice(0, 2).map((w) => w[0]).join('').toUpperCase()
 
-  // botones "ver web en vivo" / Behance (si hay url real)
+  const sec = sections(p.html)
+  const reto = sec['el reto'] || `<p>${esc(p.summary)}</p>`
+  const solucion = sec['la solución'] || sec['la solucion'] || `<p>${esc(p.summary)}</p>`
+  const resultadoTxt = stripTags(sec['el resultado'] || '') || p.summary
+
+  // galería: portada + dos imágenes de marca
+  const pool = ['/assets/svc-landing-2.jpg', '/assets/svc-tienda.jpg?v=2', '/assets/svc-corp.jpg?v=2', '/assets/svc-app-crop.jpg', '/assets/stats-title.jpg'].filter((x) => x !== cover)
+  const g1 = cover, g2 = pool[0], g3 = pool[1]
+
+  // botones "ver web / behance"
   const links = []
   if (p.url && !/example\.com/.test(p.url)) links.push(`<a href="${esc(p.url)}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:10px;background:#0D0D0D;color:#F3F2F2;padding:14px 22px;border-radius:999px;font-size:16px;font-weight:600;text-decoration:none">Ver web en vivo ${ARROW}</a>`)
   if (p.behance) links.push(`<a href="${esc(p.behance)}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:10px;border:1.5px solid #0D0D0D;color:#0D0D0D;padding:12.5px 22px;border-radius:999px;font-size:16px;font-weight:600;text-decoration:none">Ver en Behance ${ARROW}</a>`)
@@ -61,19 +81,11 @@ export default async function ProjectPage({ params }) {
     scale: '1', clip: '0%', revOp: '0', revBlur: '10px', revY: '14px'
   }))
 
-  // ---- cirugía sobre el markup del diseño ----
+  // ---- rellenar el markup del diseño (se conserva TODO el formato) ----
   let body = fs.readFileSync(path.join(process.cwd(), 'lib/dcPages/proyecto.html'), 'utf8')
-  // insertar botones antes del <main>
+  // botones antes del <main>
   const mainIdx = body.indexOf('<main')
   body = body.slice(0, mainIdx) + '{{ liveLinks }}' + body.slice(mainIdx)
-  // quitar sección de gauges (datos falsos) + reto/solución/galería -> prosa real (conserva "Lo que hicimos")
-  const seoStart = body.indexOf('<div data-seo=""')
-  const svcAnchor = body.indexOf('<div style="display:flex;flex-wrap:wrap;gap:12px 64px;align-items:flex-start;padding-top:24px;border-top:2px solid #0D0D0D">')
-  body = body.slice(0, seoStart) + '<div class="gp-prose">{{ bodyHtml }}</div>' + body.slice(svcAnchor)
-  // quitar el testimonio de ejemplo (card oscura) que va tras los servicios
-  const testiStart = body.indexOf('<div style="display:flex;flex-direction:column;gap:28px;padding:clamp(32px,5vw,72px);border-radius:28px;background:#0D0D0D;color:#F3F2F2">')
-  const moreStart = body.indexOf('<div style="display:flex;flex-direction:column;gap:clamp(32px,4vw,48px)">')
-  if (testiStart >= 0 && moreStart > testiStart) body = body.slice(0, testiStart) + body.slice(moreStart)
   // hero
   body = body.replace(/(<h1 style="font-family:'Outfit',sans-serif;margin:0;font-size:clamp\(48px,8vw,128px\)[^>]*>)[\s\S]*?<\/h1>/, '$1{{ h1 }}</h1>')
   body = body.replace('background:#D4FF00;color:#0D0D0D">Landing Page</span>', 'background:#D4FF00;color:#0D0D0D">{{ cat }}</span>')
@@ -82,14 +94,26 @@ export default async function ProjectPage({ params }) {
   body = body.replace('<span style="font-size:18px;font-weight:500">Landing Page</span>', '<span style="font-size:18px;font-weight:500">{{ cat }}</span>')
   body = body.replace('<span style="font-size:18px;font-weight:500">2026</span>', '<span style="font-size:18px;font-weight:500">{{ year }}</span>')
   body = body.replace('>Entrega</span><span style="font-size:18px;font-weight:500">2 semanas</span>', '>Resultado</span><span style="font-size:18px;font-weight:500">{{ topResult }}</span>')
-  // portada + tarjetas relacionadas con imagen real
+  // portada + galería
   body = body.replace('<image-slot id="port-1" shape="rect" placeholder="Captura principal del proyecto"></image-slot>', '<image-slot shape="rect" src="{{ cover }}"></image-slot>')
+  body = body.replace('<image-slot id="proj-g1" shape="rect" placeholder="Vista escritorio"></image-slot>', '<image-slot shape="rect" src="{{ g1 }}"></image-slot>')
+  body = body.replace('<image-slot id="proj-g2" shape="rect" placeholder="Vista móvil"></image-slot>', '<image-slot shape="rect" src="{{ g2 }}"></image-slot>')
+  body = body.replace('<image-slot id="proj-g3" shape="rect" placeholder="Detalle de UI"></image-slot>', '<image-slot shape="rect" src="{{ g3 }}"></image-slot>')
+  // reto / solución (conserva los h2 a dos pesos del diseño)
+  body = body.replace(/<p style="[^"]*">La clínica recibía[\s\S]*?<\/p>/, '<div class="gp-colprose">{{ reto }}</div>')
+  body = body.replace(/<p style="[^"]*">Una landing enfocada[\s\S]*?<\/p>/, '<div class="gp-colprose">{{ solucion }}</div>')
+  // testimonio / resultado
+  body = body.replace(/(<div style="font-family:'Outfit',sans-serif;font-size:clamp\(28px,3\.4vw,52px\);font-weight:300;[^"]*">)[\s\S]*?(<\/div>\s*<div style="display:flex;align-items:center;gap:14px">)/, '$1“{{ resultado }}”$2')
+  body = body.replace('font-weight:700">CM</span>', 'font-weight:700">{{ initials }}</span>')
+  body = body.replace('<span style="font-size:16px;font-weight:600">Carla M.</span>', '<span style="font-size:16px;font-weight:600">{{ client }}</span>')
+  body = body.replace('<span style="font-size:14px;color:rgba(243,242,242,.7)">Clínica estética, Caracas</span>', '<span style="font-size:14px;color:rgba(243,242,242,.7)">{{ clientRole }}</span>')
+  // tarjetas relacionadas con imagen real
   body = body.replace('<image-slot id="{{ p.slot }}" shape="rect" placeholder="{{ p.ph }}"></image-slot>', '<image-slot shape="rect" src="{{ p.img }}"></image-slot>')
 
   const data = {
     h1: twoTone(p.title), cat: p.category, summary: p.summary, client: p.client, year: p.year,
-    topResult, cover, coverAR: '16 / 9', bodyHtml: p.html, scope: p.services || [], more,
-    liveLinks, waLink: WA
+    topResult, cover, coverAR: '16 / 9', g1, g2, g3, reto, solucion, resultado: resultadoTxt,
+    initials, clientRole: p.client ? p.category : '', scope: p.services || [], more, liveLinks, waLink: WA
   }
   const { html, css } = renderDesign(body, data)
 
