@@ -81,7 +81,7 @@ export default `<style data-gp-landing>
 <section id="gpHero" data-screen-label="Hero" style="position:relative;padding-top:0;padding-bottom:40px">
 <div style="position:sticky;top:0;height:100vh;display:flex;align-items:center">
 <div style="width:100%;max-width:1540px;margin:0 auto;padding:0 clamp(20px,2.2vw,40px);display:flex;flex-wrap:wrap;align-items:center;gap:40px">
-  <div class="gpHeroText" style="position:relative;z-index:2;flex:1 1 35%;min-width:300px;display:flex;flex-direction:column;justify-content:flex-start;gap:32px;padding:14px 0 8px;pointer-events:none">
+  <div style="position:relative;z-index:2;flex:1 1 0%;min-width:300px;display:flex;flex-direction:column;justify-content:flex-start;gap:32px;padding:14px 0 8px;pointer-events:none">
     <div style="display:flex;flex-direction:column;gap:clamp(20px,2.4vw,36px)">
       <h1 style="font-family:'Outfit',sans-serif;margin:0;font-size:clamp(52px,7.6vw,152px);line-height:.84;font-weight:400;letter-spacing:-.045em;text-transform:none;white-space:nowrap;color:#0D0D0D;display:flex;flex-direction:column">
         <span>Tu web</span>
@@ -98,14 +98,14 @@ export default `<style data-gp-landing>
       </div>
     </div>
   </div>
-  <div class="gpHeroVid" style="position:relative;z-index:1;flex:0 1 min(62%, calc(100svh - 180px));min-width:min(100%,340px);aspect-ratio:1/1;border-radius:clamp(24px,2.6vw,44px);overflow:hidden;background:#DCDCD3">
+  <div style="position:relative;z-index:1;flex:1 1 0%;min-width:min(100%,340px);display:flex;align-items:center;justify-content:center"><div class="gpHeroVid" style="position:relative;width:100%;max-width:min(100%,calc(100svh - 180px));aspect-ratio:1/1;border-radius:clamp(24px,2.6vw,44px);overflow:hidden;background:#DCDCD3">
     <video id="gpHeroVideo" autoplay="" loop="" muted playsinline="" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>
     <div style="position:absolute;top:22px;right:22px;display:flex;align-items:center;gap:10px;padding:10px 18px;border-radius:999px;border:1px solid rgba(13,13,13,.18);background:rgba(243,242,242,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#2A2A2A;pointer-events:none;white-space:nowrap">
       <span style="width:8px;height:8px;border-radius:999px;background:#D4FF00;box-shadow:0 0 0 3px rgba(13,13,13,.12)"></span>
-      <strong id="gpClock" style="font-weight:600;color:#0D0D0D;font-variant-numeric:tabular-nums">10:39</strong>
+      <strong id="gpClock" style="font-weight:600;color:#0D0D0D;font-variant-numeric:tabular-nums">10:56</strong>
       <span id="gpClockLabel">Mañana</span>
     </div>
-  </div>
+  </div></div>
 </div>
 </div>
 </section>
