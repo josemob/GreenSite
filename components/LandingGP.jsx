@@ -1,9 +1,8 @@
 'use client'
 
 import { useEffect } from 'react'
-import HTML from './landingHtml'
 
-export default function LandingGP() {
+export default function LandingGP({ html }) {
   useEffect(() => {
     const D = [] // disposers
     const on = (el, ev, fn, opt) => { if (!el) return; el.addEventListener(ev, fn, opt); D.push(() => el.removeEventListener(ev, fn, opt)) }
@@ -437,5 +436,5 @@ export default function LandingGP() {
     }
   }, [])
 
-  return <div dangerouslySetInnerHTML={{ __html: HTML }} />
+  return <div dangerouslySetInnerHTML={{ __html: html }} />
 }

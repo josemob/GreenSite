@@ -102,7 +102,7 @@ export default `<style data-gp-landing>
     <video id="gpHeroVideo" autoplay="" loop="" muted playsinline="" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>
     <div style="position:absolute;top:22px;right:22px;display:flex;align-items:center;gap:10px;padding:10px 18px;border-radius:999px;border:1px solid rgba(13,13,13,.18);background:rgba(243,242,242,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#2A2A2A;pointer-events:none;white-space:nowrap">
       <span style="width:8px;height:8px;border-radius:999px;background:#D4FF00;box-shadow:0 0 0 3px rgba(13,13,13,.12)"></span>
-      <strong id="gpClock" style="font-weight:600;color:#0D0D0D;font-variant-numeric:tabular-nums">08:47</strong>
+      <strong id="gpClock" style="font-weight:600;color:#0D0D0D;font-variant-numeric:tabular-nums">09:12</strong>
       <span id="gpClockLabel">Mañana</span>
     </div>
   </div>
@@ -369,184 +369,19 @@ export default `<style data-gp-landing>
   <a class="gpMobOnly gph21" href="/portafolio" style="align-self:flex-start;display:flex;align-items:center;gap:12px;background:#0D0D0D;color:#F3F2F2;padding:14px 24px;border-radius:999px;font-size:16px;font-weight:600;text-decoration:none">Ver todo el portafolio <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></a>
   
 </div>
-<div class="gpMobOnly" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(max(260px,calc((100% - 40px) / 3)),1fr));gap:20px;margin:clamp(32px,5vw,64px) 0 clamp(48px,6vw,80px)">
-    
-      <a href="#portafolio" class="gpPfmCard gph22" style="display:block;color:#0D0D0D;text-decoration:none">
-        <div style="position:relative;aspect-ratio:1/1;border-radius:24px;overflow:hidden;background:#1E1E1E">
-          <div style="position:absolute;inset:0;transform:scale(1);transition:transform .6s cubic-bezier(.2,.8,.2,1)"><image-slot style="position:absolute;inset:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:rgba(13,13,13,.04);color:rgba(243,242,242,.28);font-size:12px;text-align:center;padding:10px;box-sizing:border-box">Captura del proyecto 1</image-slot></div>
-          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,13,13,.55) 0%,rgba(13,13,13,0) 38%,rgba(13,13,13,0) 68%,rgba(13,13,13,.5) 100%);pointer-events:none"></div>
-          <div style="position:absolute;top:clamp(20px,2.2vw,28px);left:clamp(20px,2.2vw,28px);right:clamp(20px,2.2vw,28px);font-size:clamp(26px,2.4vw,36px);font-weight:700;letter-spacing:-.03em;line-height:1;color:#FFFFFF;pointer-events:none">Proyecto uno</div>
-          <div style="position:absolute;left:clamp(16px,1.8vw,22px);right:clamp(16px,1.8vw,22px);bottom:clamp(16px,1.8vw,22px);display:flex;gap:8px;flex-wrap:wrap;pointer-events:none">
-            
-              <span style="font-size:14px;font-weight:500;color:#FFFFFF;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">Landing Page</span>
-            
-
-              <span style="font-size:14px;font-weight:500;color:#FFFFFF;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">UX/UI</span>
-            
-
-              <span style="font-size:14px;font-weight:500;color:#FFFFFF;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">WhatsApp</span>
-            
-          </div>
-          <div style="position:absolute;inset:0;z-index:2;background:#D4FF00;color:#0D0D0D;padding:clamp(22px,2.4vw,32px);display:flex;flex-direction:column;justify-content:space-between;gap:20px;pointer-events:none;clip-path:circle(0% at 50% 50%);transition:clip-path .7s cubic-bezier(.65,0,.25,1)">
-            <div style="display:flex;flex-direction:column;gap:14px;opacity:0;filter:blur(10px);transform:translateY(14px);transition:opacity .5s ease .2s,filter .6s ease .2s,transform .6s cubic-bezier(.2,.8,.2,1) .2s">
-              <div style="font-size:clamp(26px,2.4vw,36px);font-weight:700;letter-spacing:-.03em;line-height:1">Proyecto uno</div>
-              <div style="font-size:16px;line-height:1.5;max-width:36ch;text-wrap:pretty">Landing para clínica estética con agenda por WhatsApp.</div>
-            </div>
-            <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;opacity:0;transition:opacity .5s ease .25s">
-              <div style="font-size:clamp(28px,2.6vw,40px);font-weight:700;letter-spacing:-.03em;line-height:1">+38% citas</div>
-              <span style="display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600">Ver caso <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></span>
-            </div>
-          </div>
-        </div>
-      </a>
-    
-
-      <a href="#portafolio" class="gpPfmCard gph22" style="display:block;color:#0D0D0D;text-decoration:none">
-        <div style="position:relative;aspect-ratio:1/1;border-radius:24px;overflow:hidden;background:#1E1E1E">
-          <div style="position:absolute;inset:0;transform:scale(1);transition:transform .6s cubic-bezier(.2,.8,.2,1)"><image-slot style="position:absolute;inset:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:rgba(13,13,13,.04);color:rgba(243,242,242,.28);font-size:12px;text-align:center;padding:10px;box-sizing:border-box">Captura del proyecto 2</image-slot></div>
-          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,13,13,.55) 0%,rgba(13,13,13,0) 38%,rgba(13,13,13,0) 68%,rgba(13,13,13,.5) 100%);pointer-events:none"></div>
-          <div style="position:absolute;top:clamp(20px,2.2vw,28px);left:clamp(20px,2.2vw,28px);right:clamp(20px,2.2vw,28px);font-size:clamp(26px,2.4vw,36px);font-weight:700;letter-spacing:-.03em;line-height:1;color:#FFFFFF;pointer-events:none">Proyecto dos</div>
-          <div style="position:absolute;left:clamp(16px,1.8vw,22px);right:clamp(16px,1.8vw,22px);bottom:clamp(16px,1.8vw,22px);display:flex;gap:8px;flex-wrap:wrap;pointer-events:none">
-            
-              <span style="font-size:14px;font-weight:500;color:#FFFFFF;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">E-commerce</span>
-            
-
-              <span style="font-size:14px;font-weight:500;color:#FFFFFF;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">Pagos</span>
-            
-
-              <span style="font-size:14px;font-weight:500;color:#FFFFFF;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">UX/UI</span>
-            
-          </div>
-          <div style="position:absolute;inset:0;z-index:2;background:#D4FF00;color:#0D0D0D;padding:clamp(22px,2.4vw,32px);display:flex;flex-direction:column;justify-content:space-between;gap:20px;pointer-events:none;clip-path:circle(0% at 50% 50%);transition:clip-path .7s cubic-bezier(.65,0,.25,1)">
-            <div style="display:flex;flex-direction:column;gap:14px;opacity:0;filter:blur(10px);transform:translateY(14px);transition:opacity .5s ease .2s,filter .6s ease .2s,transform .6s cubic-bezier(.2,.8,.2,1) .2s">
-              <div style="font-size:clamp(26px,2.4vw,36px);font-weight:700;letter-spacing:-.03em;line-height:1">Proyecto dos</div>
-              <div style="font-size:16px;line-height:1.5;max-width:36ch;text-wrap:pretty">Tienda con catálogo, pagos locales y panel de pedidos.</div>
-            </div>
-            <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;opacity:0;transition:opacity .5s ease .25s">
-              <div style="font-size:clamp(28px,2.6vw,40px);font-weight:700;letter-spacing:-.03em;line-height:1">3× ventas</div>
-              <span style="display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600">Ver caso <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></span>
-            </div>
-          </div>
-        </div>
-      </a>
-    
-
-      <a href="#portafolio" class="gpPfmCard gph22" style="display:block;color:#0D0D0D;text-decoration:none">
-        <div style="position:relative;aspect-ratio:1/1;border-radius:24px;overflow:hidden;background:#1E1E1E">
-          <div style="position:absolute;inset:0;transform:scale(1);transition:transform .6s cubic-bezier(.2,.8,.2,1)"><image-slot style="position:absolute;inset:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:rgba(13,13,13,.04);color:rgba(243,242,242,.28);font-size:12px;text-align:center;padding:10px;box-sizing:border-box">Captura del proyecto 3</image-slot></div>
-          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,13,13,.55) 0%,rgba(13,13,13,0) 38%,rgba(13,13,13,0) 68%,rgba(13,13,13,.5) 100%);pointer-events:none"></div>
-          <div style="position:absolute;top:clamp(20px,2.2vw,28px);left:clamp(20px,2.2vw,28px);right:clamp(20px,2.2vw,28px);font-size:clamp(26px,2.4vw,36px);font-weight:700;letter-spacing:-.03em;line-height:1;color:#FFFFFF;pointer-events:none">Proyecto tres</div>
-          <div style="position:absolute;left:clamp(16px,1.8vw,22px);right:clamp(16px,1.8vw,22px);bottom:clamp(16px,1.8vw,22px);display:flex;gap:8px;flex-wrap:wrap;pointer-events:none">
-            
-              <span style="font-size:14px;font-weight:500;color:#FFFFFF;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">Web Corporativa</span>
-            
-
-              <span style="font-size:14px;font-weight:500;color:#FFFFFF;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">Blog</span>
-            
-
-              <span style="font-size:14px;font-weight:500;color:#FFFFFF;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">SEO</span>
-            
-          </div>
-          <div style="position:absolute;inset:0;z-index:2;background:#D4FF00;color:#0D0D0D;padding:clamp(22px,2.4vw,32px);display:flex;flex-direction:column;justify-content:space-between;gap:20px;pointer-events:none;clip-path:circle(0% at 50% 50%);transition:clip-path .7s cubic-bezier(.65,0,.25,1)">
-            <div style="display:flex;flex-direction:column;gap:14px;opacity:0;filter:blur(10px);transform:translateY(14px);transition:opacity .5s ease .2s,filter .6s ease .2s,transform .6s cubic-bezier(.2,.8,.2,1) .2s">
-              <div style="font-size:clamp(26px,2.4vw,36px);font-weight:700;letter-spacing:-.03em;line-height:1">Proyecto tres</div>
-              <div style="font-size:16px;line-height:1.5;max-width:36ch;text-wrap:pretty">Web institucional con blog y panel editable.</div>
-            </div>
-            <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;opacity:0;transition:opacity .5s ease .25s">
-              <div style="font-size:clamp(28px,2.6vw,40px);font-weight:700;letter-spacing:-.03em;line-height:1">+52% leads</div>
-              <span style="display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600">Ver caso <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></span>
-            </div>
-          </div>
-        </div>
-      </a>
-    
-  </div>
+<div class="gpMobOnly" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(max(260px,calc((100% - 40px) / 3)),1fr));gap:20px;margin:clamp(32px,5vw,64px) 0 clamp(48px,6vw,80px)"><!--PF_MOBILE--></div>
 
 <section class="gpDeskOnly" id="gpPf" data-screen-label="Portafolio" style="position:relative;height:460vh;margin:clamp(40px,5vw,64px) 0 clamp(48px,6vw,80px);scroll-margin-top:0">
   <div style="position:sticky;top:16px;height:calc(100vh - 32px);border-radius:28px;overflow:hidden;background:#0D0D0D;color:#F3F2F2;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);--pf-h:calc((100vh - 32px) * .72)">
     <div style="position:relative;display:flex;flex-direction:column;padding:clamp(32px,4vw,64px);gap:24px;min-width:0">
       <div style="position:relative;flex:1;min-height:0;overflow:hidden;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 22%,#000 78%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 22%,#000 78%,transparent 100%)">
-        <div data-pf-list="" style="position:absolute;left:0;right:0;top:0;display:flex;flex-direction:column;gap:clamp(28px,3vw,44px);will-change:transform">
-            <div data-pf-name="" style="display:flex;flex-direction:column;gap:6px;transition:opacity .4s ease">
-              <span style="font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(243,242,242,.6)">(Landing Page)</span>
-              <span data-pf-title="" style="font-size:clamp(36px,4.4vw,64px);font-weight:500;letter-spacing:-.04em;line-height:1;color:#F3F2F2;transition:color .4s ease">Proyecto uno</span>
-            </div>
-            <div data-pf-name="" style="display:flex;flex-direction:column;gap:6px;transition:opacity .4s ease">
-              <span style="font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(243,242,242,.6)">(Tienda online)</span>
-              <span data-pf-title="" style="font-size:clamp(36px,4.4vw,64px);font-weight:500;letter-spacing:-.04em;line-height:1;color:#F3F2F2;transition:color .4s ease">Proyecto dos</span>
-            </div>
-            <div data-pf-name="" style="display:flex;flex-direction:column;gap:6px;transition:opacity .4s ease">
-              <span style="font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(243,242,242,.6)">(Web Corporativa)</span>
-              <span data-pf-title="" style="font-size:clamp(36px,4.4vw,64px);font-weight:500;letter-spacing:-.04em;line-height:1;color:#F3F2F2;transition:color .4s ease">Proyecto tres</span>
-            </div>
-            <div data-pf-name="" style="display:flex;flex-direction:column;gap:6px;transition:opacity .4s ease">
-              <span style="font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(243,242,242,.6)">(App Móvil)</span>
-              <span data-pf-title="" style="font-size:clamp(36px,4.4vw,64px);font-weight:500;letter-spacing:-.04em;line-height:1;color:#F3F2F2;transition:color .4s ease">Proyecto cuatro</span>
-            </div>
-            <div data-pf-name="" style="display:flex;flex-direction:column;gap:6px;transition:opacity .4s ease">
-              <span style="font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(243,242,242,.6)">(Landing Page)</span>
-              <span data-pf-title="" style="font-size:clamp(36px,4.4vw,64px);font-weight:500;letter-spacing:-.04em;line-height:1;color:#F3F2F2;transition:color .4s ease">Proyecto cinco</span>
-            </div>
-            <div data-pf-name="" style="display:flex;flex-direction:column;gap:6px;transition:opacity .4s ease">
-              <span style="font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(243,242,242,.6)">(Web Corporativa)</span>
-              <span data-pf-title="" style="font-size:clamp(36px,4.4vw,64px);font-weight:500;letter-spacing:-.04em;line-height:1;color:#F3F2F2;transition:color .4s ease">Proyecto seis</span>
-            </div>
-        </div>
+        <div data-pf-list="" style="position:absolute;left:0;right:0;top:0;display:flex;flex-direction:column;gap:clamp(28px,3vw,44px);will-change:transform"><!--PF_NAMES--></div>
       </div>
       <a class="gph23" href="#contacto" style="align-self:flex-start;border-radius:999px;display:flex;align-items:center;gap:12px;background:#D4FF00;color:#0D0D0D;padding:12px 20px;font-size:16px;font-weight:600;text-decoration:none;position:relative;z-index:2">Quiero el mío <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a>
     </div>
     <div style="position:relative;min-width:0;overflow:hidden;padding:0 clamp(20px,2.6vw,48px) 0 0">
       <div data-pf-cur="" style="position:absolute;left:0;top:0;z-index:5;width:72px;height:72px;margin:-36px 0 0 -36px;border-radius:999px;background:#0D0D0D;color:#D4FF00;display:flex;align-items:center;justify-content:center;pointer-events:none;transform:scale(0);transition:transform .35s cubic-bezier(.2,.8,.2,1)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></div>
-      <div data-pf-track="" style="display:flex;flex-direction:column;gap:32px;will-change:transform">
-          <div data-pf-img="" style="position:relative;flex:none;height:var(--pf-h);border-radius:18px;overflow:hidden;background:#1E1E1E">
-            <image-slot style="position:absolute;inset:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:rgba(13,13,13,.04);color:rgba(243,242,242,.28);font-size:12px;text-align:center;padding:10px;box-sizing:border-box">Captura del proyecto 1</image-slot>
-            <div data-pf-ov="" style="position:absolute;inset:0;z-index:2;background:#D4FF00;color:#0D0D0D;padding:clamp(24px,2.6vw,40px);display:flex;flex-direction:column;justify-content:space-between;gap:24px;pointer-events:none;clip-path:circle(0px at 50% 50%)">
-              <div style="font-family:'Outfit',sans-serif;font-size:clamp(28px,2.8vw,44px);font-weight:600;letter-spacing:-.03em;line-height:1.02;max-width:16ch;text-wrap:balance">Proyecto uno: ver el caso completo</div>
-              <div style="font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase">(Landing Page)</div>
-            </div>
-            <span style="position:absolute;right:18px;bottom:18px;display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(13,13,13,.45);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#FFFFFF;font-size:15px;font-weight:500;pointer-events:none">Landing Page</span>
-          </div>
-          <div data-pf-img="" style="position:relative;flex:none;height:var(--pf-h);border-radius:18px;overflow:hidden;background:#1E1E1E">
-            <image-slot style="position:absolute;inset:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:rgba(13,13,13,.04);color:rgba(243,242,242,.28);font-size:12px;text-align:center;padding:10px;box-sizing:border-box">Captura del proyecto 2</image-slot>
-            <div data-pf-ov="" style="position:absolute;inset:0;z-index:2;background:#D4FF00;color:#0D0D0D;padding:clamp(24px,2.6vw,40px);display:flex;flex-direction:column;justify-content:space-between;gap:24px;pointer-events:none;clip-path:circle(0px at 50% 50%)">
-              <div style="font-family:'Outfit',sans-serif;font-size:clamp(28px,2.8vw,44px);font-weight:600;letter-spacing:-.03em;line-height:1.02;max-width:16ch;text-wrap:balance">Proyecto dos: ver el caso completo</div>
-              <div style="font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase">(Tienda online)</div>
-            </div>
-            <span style="position:absolute;right:18px;bottom:18px;display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(13,13,13,.45);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#FFFFFF;font-size:15px;font-weight:500;pointer-events:none">Tienda online</span>
-          </div>
-          <div data-pf-img="" style="position:relative;flex:none;height:var(--pf-h);border-radius:18px;overflow:hidden;background:#1E1E1E">
-            <image-slot style="position:absolute;inset:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:rgba(13,13,13,.04);color:rgba(243,242,242,.28);font-size:12px;text-align:center;padding:10px;box-sizing:border-box">Captura del proyecto 3</image-slot>
-            <div data-pf-ov="" style="position:absolute;inset:0;z-index:2;background:#D4FF00;color:#0D0D0D;padding:clamp(24px,2.6vw,40px);display:flex;flex-direction:column;justify-content:space-between;gap:24px;pointer-events:none;clip-path:circle(0px at 50% 50%)">
-              <div style="font-family:'Outfit',sans-serif;font-size:clamp(28px,2.8vw,44px);font-weight:600;letter-spacing:-.03em;line-height:1.02;max-width:16ch;text-wrap:balance">Proyecto tres: ver el caso completo</div>
-              <div style="font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase">(Web Corporativa)</div>
-            </div>
-            <span style="position:absolute;right:18px;bottom:18px;display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(13,13,13,.45);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#FFFFFF;font-size:15px;font-weight:500;pointer-events:none">Web Corporativa</span>
-          </div>
-          <div data-pf-img="" style="position:relative;flex:none;height:var(--pf-h);border-radius:18px;overflow:hidden;background:#1E1E1E">
-            <image-slot style="position:absolute;inset:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:rgba(13,13,13,.04);color:rgba(243,242,242,.28);font-size:12px;text-align:center;padding:10px;box-sizing:border-box">Captura del proyecto 4</image-slot>
-            <div data-pf-ov="" style="position:absolute;inset:0;z-index:2;background:#D4FF00;color:#0D0D0D;padding:clamp(24px,2.6vw,40px);display:flex;flex-direction:column;justify-content:space-between;gap:24px;pointer-events:none;clip-path:circle(0px at 50% 50%)">
-              <div style="font-family:'Outfit',sans-serif;font-size:clamp(28px,2.8vw,44px);font-weight:600;letter-spacing:-.03em;line-height:1.02;max-width:16ch;text-wrap:balance">Proyecto cuatro: ver el caso completo</div>
-              <div style="font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase">(App Móvil)</div>
-            </div>
-            <span style="position:absolute;right:18px;bottom:18px;display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(13,13,13,.45);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#FFFFFF;font-size:15px;font-weight:500;pointer-events:none">App Móvil</span>
-          </div>
-          <div data-pf-img="" style="position:relative;flex:none;height:var(--pf-h);border-radius:18px;overflow:hidden;background:#1E1E1E">
-            <image-slot style="position:absolute;inset:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:rgba(13,13,13,.04);color:rgba(243,242,242,.28);font-size:12px;text-align:center;padding:10px;box-sizing:border-box">Captura del proyecto 5</image-slot>
-            <div data-pf-ov="" style="position:absolute;inset:0;z-index:2;background:#D4FF00;color:#0D0D0D;padding:clamp(24px,2.6vw,40px);display:flex;flex-direction:column;justify-content:space-between;gap:24px;pointer-events:none;clip-path:circle(0px at 50% 50%)">
-              <div style="font-family:'Outfit',sans-serif;font-size:clamp(28px,2.8vw,44px);font-weight:600;letter-spacing:-.03em;line-height:1.02;max-width:16ch;text-wrap:balance">Proyecto cinco: ver el caso completo</div>
-              <div style="font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase">(Landing Page)</div>
-            </div>
-            <span style="position:absolute;right:18px;bottom:18px;display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(13,13,13,.45);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#FFFFFF;font-size:15px;font-weight:500;pointer-events:none">Landing Page</span>
-          </div>
-          <div data-pf-img="" style="position:relative;flex:none;height:var(--pf-h);border-radius:18px;overflow:hidden;background:#1E1E1E">
-            <image-slot style="position:absolute;inset:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:rgba(13,13,13,.04);color:rgba(243,242,242,.28);font-size:12px;text-align:center;padding:10px;box-sizing:border-box">Captura del proyecto 6</image-slot>
-            <div data-pf-ov="" style="position:absolute;inset:0;z-index:2;background:#D4FF00;color:#0D0D0D;padding:clamp(24px,2.6vw,40px);display:flex;flex-direction:column;justify-content:space-between;gap:24px;pointer-events:none;clip-path:circle(0px at 50% 50%)">
-              <div style="font-family:'Outfit',sans-serif;font-size:clamp(28px,2.8vw,44px);font-weight:600;letter-spacing:-.03em;line-height:1.02;max-width:16ch;text-wrap:balance">Proyecto seis: ver el caso completo</div>
-              <div style="font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase">(Web Corporativa)</div>
-            </div>
-            <span style="position:absolute;right:18px;bottom:18px;display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(13,13,13,.45);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#FFFFFF;font-size:15px;font-weight:500;pointer-events:none">Web Corporativa</span>
-          </div>
-      </div>
+      <div data-pf-track="" style="display:flex;flex-direction:column;gap:32px;will-change:transform"><!--PF_TRACK--></div>
     </div>
   </div>
 </section>
