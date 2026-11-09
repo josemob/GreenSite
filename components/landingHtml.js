@@ -54,7 +54,7 @@ export default `<style data-gp-landing>
       <span data-nav-pill="" style="position:absolute;left:0;top:0;width:0;height:0;border-radius:999px;background:#D4FF00;opacity:0;pointer-events:none;z-index:0;transition:transform .45s cubic-bezier(.3,1.3,.5,1),width .45s cubic-bezier(.3,1.3,.5,1),height .3s ease,opacity .25s ease"></span>
       <a class="gph1" href="#servicios" style="display:flex;align-items:center;gap:6px;color:#0D0D0D;position:relative;z-index:1;padding:8px 14px;border-radius:999px;text-decoration:none">Servicios <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></a>
       <a class="gph2" href="#proceso" style="color:#0D0D0D;position:relative;z-index:1;padding:8px 14px;border-radius:999px;text-decoration:none">Cómo trabajamos</a>
-      <a class="gph3" href="#portafolio" style="color:#0D0D0D;position:relative;z-index:1;padding:8px 14px;border-radius:999px;text-decoration:none">Portafolio</a>
+      <a class="gph3" href="/portafolio" style="color:#0D0D0D;position:relative;z-index:1;padding:8px 14px;border-radius:999px;text-decoration:none">Portafolio</a>
       <a class="gph4" href="/blog" style="color:#0D0D0D;position:relative;z-index:1;padding:8px 14px;border-radius:999px;text-decoration:none">Blog</a>
     </nav>
   </div>
@@ -68,7 +68,7 @@ export default `<style data-gp-landing>
   <div style="display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center">
       <a class="gph6" href="#servicios" data-gp="menuClose" style="color:#FFFFFF;font-size:clamp(34px,9vw,44px);font-weight:600;letter-spacing:-.03em;line-height:1.1;text-decoration:none">Servicios</a>
       <a class="gph7" href="#proceso" data-gp="menuClose" style="color:#FFFFFF;font-size:clamp(34px,9vw,44px);font-weight:600;letter-spacing:-.03em;line-height:1.1;text-decoration:none">Cómo trabajamos</a>
-      <a class="gph8" href="#portafolio" data-gp="menuClose" style="color:#FFFFFF;font-size:clamp(34px,9vw,44px);font-weight:600;letter-spacing:-.03em;line-height:1.1;text-decoration:none">Portafolio</a>
+      <a class="gph8" href="/portafolio" data-gp="menuClose" style="color:#FFFFFF;font-size:clamp(34px,9vw,44px);font-weight:600;letter-spacing:-.03em;line-height:1.1;text-decoration:none">Portafolio</a>
       <a class="gph9" href="/blog" data-gp="menuClose" style="color:#FFFFFF;font-size:clamp(34px,9vw,44px);font-weight:600;letter-spacing:-.03em;line-height:1.1;text-decoration:none">Blog</a>
   </div>
   <div style="display:flex;flex-direction:column;align-items:center;gap:20px;width:100%">
@@ -102,7 +102,7 @@ export default `<style data-gp-landing>
     <video id="gpHeroVideo" autoplay="" loop="" muted playsinline="" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>
     <div style="position:absolute;top:22px;right:22px;display:flex;align-items:center;gap:10px;padding:10px 18px;border-radius:999px;border:1px solid rgba(13,13,13,.18);background:rgba(243,242,242,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#2A2A2A;pointer-events:none;white-space:nowrap">
       <span style="width:8px;height:8px;border-radius:999px;background:#D4FF00;box-shadow:0 0 0 3px rgba(13,13,13,.12)"></span>
-      <strong id="gpClock" style="font-weight:600;color:#0D0D0D;font-variant-numeric:tabular-nums">07:45</strong>
+      <strong id="gpClock" style="font-weight:600;color:#0D0D0D;font-variant-numeric:tabular-nums">08:47</strong>
       <span id="gpClockLabel">Mañana</span>
     </div>
   </div>
@@ -366,7 +366,7 @@ export default `<style data-gp-landing>
 <div id="portafolio" style="display:flex;flex-direction:column;gap:20px;padding-top:clamp(72px,10vw,128px);scroll-margin-top:-40px">
   <div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase">Portafolio</div>
   <h2 style="font-family:'Outfit',sans-serif;margin:0;font-size:clamp(36px,4.4vw,60px);line-height:.98;font-weight:700;letter-spacing:-.03em;text-wrap:balance"><span style="display:block;font-weight:700">Proyectos que</span><span style="display:block;font-weight:300">ya están vendiendo.</span></h2>
-  <a class="gpMobOnly gph21" href="#portafolio" style="align-self:flex-start;display:flex;align-items:center;gap:12px;background:#0D0D0D;color:#F3F2F2;padding:14px 24px;border-radius:999px;font-size:16px;font-weight:600;text-decoration:none">Ver todo el portafolio <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></a>
+  <a class="gpMobOnly gph21" href="/portafolio" style="align-self:flex-start;display:flex;align-items:center;gap:12px;background:#0D0D0D;color:#F3F2F2;padding:14px 24px;border-radius:999px;font-size:16px;font-weight:600;text-decoration:none">Ver todo el portafolio <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></a>
   
 </div>
 <div class="gpMobOnly" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(max(260px,calc((100% - 40px) / 3)),1fr));gap:20px;margin:clamp(32px,5vw,64px) 0 clamp(48px,6vw,80px)">
@@ -936,7 +936,7 @@ export default `<style data-gp-landing>
     </div>
     <div style="display:flex;flex-direction:column;gap:12px;font-size:15px">
       <div style="font-size:12px;font-weight:600;letter-spacing:.14em;color:rgba(243,242,242,.5);padding-bottom:4px">ESTUDIO</div>
-      <a href="#proceso" style="color:#F3F2F2">Cómo trabajamos</a><a href="#portafolio" style="color:#F3F2F2">Portafolio</a><a href="/blog" style="color:#F3F2F2">Blog</a>
+      <a href="#proceso" style="color:#F3F2F2">Cómo trabajamos</a><a href="/portafolio" style="color:#F3F2F2">Portafolio</a><a href="/blog" style="color:#F3F2F2">Blog</a>
     </div>
     <div style="display:flex;flex-direction:column;gap:12px;font-size:15px">
       <div style="font-size:12px;font-weight:600;letter-spacing:.14em;color:rgba(243,242,242,.5);padding-bottom:4px">CONTACTO</div>

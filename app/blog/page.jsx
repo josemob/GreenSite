@@ -1,43 +1,52 @@
-import Link from 'next/link'
-import { getAllPosts, fmtDate } from '../../lib/posts'
+import fs from 'node:fs'
+import path from 'node:path'
+import { getAllPosts, fmtMonthYear } from '../../lib/posts'
+import { renderDesign, coverFor } from '../../lib/dcEngine'
+import GPSubpageClient from '../../components/GPSubpageClient'
 
 export const metadata = {
-  title: 'Blog',
-  description: 'Ideas claras sobre diseño web, conversión y cómo hacer que tu negocio venda más por internet.'
+  title: 'Blog — Ideas para vender más',
+  description:
+    'Artículos sobre webs, tiendas y apps que venden, explicados en simple. Conversión, e-commerce, diseño y guías para negocios en Venezuela y Latam.',
+  alternates: { canonical: '/blog' }
 }
 
-export default function Blog() {
-  const posts = getAllPosts()
+const WA = 'https://wa.me/584128172712?text=' + encodeURIComponent('Hola Greenpop, vengo del blog y quiero hablar de mi proyecto.')
+
+export default function BlogPage() {
+  let body = fs.readFileSync(path.join(process.cwd(), 'lib/dcPages/blog.html'), 'utf8')
+  // marcar categoría en tarjetas y botones (para el filtro client-side)
+  body = body
+    .replace('<a href="Post.dc.html"', '<a href="Post.dc.html" data-cat="{{ p.cat }}"')
+    .replace('<button type="button" onClick="{{ c.pick }}"', '<button type="button" data-cat="{{ c.label }}" onClick="{{ c.pick }}"')
+
+  const posts = getAllPosts().map((p, i) => {
+    const cat = (p.tags && p.tags[0]) || 'Artículo'
+    return {
+      href: `/blog/${p.slug}`,
+      cat,
+      img: coverFor(p.cover, cat, i),
+      time: fmtMonthYear(p.date),
+      author: p.author || 'José Mobresú',
+      title: p.title,
+      excerpt: p.description,
+      blur: '0px', scale: '1', veil: '0', revOp: '0', revBlur: '10px', revY: '14px', tW: '400'
+    }
+  })
+  const uniqueCats = [...new Set(posts.map((p) => p.cat))]
+  const cats = ['Todos', ...uniqueCats].map((label) => {
+    const on = label === 'Todos'
+    return { label, bg: on ? '#D4FF00' : 'transparent', bd: on ? '#D4FF00' : 'rgba(13,13,13,.25)', fw: on ? '600' : '400' }
+  })
+
+  const data = { posts, cats, empty: posts.length === 0, hasMore: false, waLink: WA }
+  const { html, css } = renderDesign(body, data)
 
   return (
-    <main className="blog">
-      <div className="wrap">
-        <header className="blog-head rv in">
-          <div className="eyebrow">The Lab · Blog</div>
-          <h1>Ideas para que tu negocio venda más.</h1>
-          <p>Diseño, conversión y estrategia digital explicados en simple. Sin humo.</p>
-        </header>
-
-        {posts.length > 0 ? (
-          <div className="postlist">
-            {posts.map((post) => (
-              <Link key={post.slug} href={`/blog/${post.slug}`} className="plink">
-                <div className="meta">
-                  {post.tags?.length ? <span className="tag">{post.tags[0]}</span> : null}
-                  <span className="date">{fmtDate(post.date)}</span>
-                </div>
-                <div>
-                  <h2>{post.title}</h2>
-                  <p className="ex">{post.description}</p>
-                </div>
-                <span className="go">→</span>
-              </Link>
-            ))}
-          </div>
-        ) : (
-          <p className="empty">Muy pronto publicaremos nuestros primeros artículos. 🍋</p>
-        )}
-      </div>
-    </main>
+    <>
+      <style dangerouslySetInnerHTML={{ __html: css }} />
+      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <GPSubpageClient />
+    </>
   )
 }
