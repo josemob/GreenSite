@@ -98,11 +98,11 @@ export default `<style data-gp-landing>
       </div>
     </div>
   </div>
-  <div style="position:relative;z-index:1;flex:0 1 min(58%, calc(100svh - 280px));min-width:min(100%,340px);aspect-ratio:1/1;border-radius:clamp(24px,2.6vw,44px);overflow:hidden;background:#DCDCD3">
+  <div style="position:relative;z-index:1;flex:0 1 min(62%, calc(100svh - 180px));min-width:min(100%,340px);aspect-ratio:1/1;border-radius:clamp(24px,2.6vw,44px);overflow:hidden;background:#DCDCD3">
     <video id="gpHeroVideo" autoplay="" loop="" muted playsinline="" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>
     <div style="position:absolute;top:22px;right:22px;display:flex;align-items:center;gap:10px;padding:10px 18px;border-radius:999px;border:1px solid rgba(13,13,13,.18);background:rgba(243,242,242,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#2A2A2A;pointer-events:none;white-space:nowrap">
       <span style="width:8px;height:8px;border-radius:999px;background:#D4FF00;box-shadow:0 0 0 3px rgba(13,13,13,.12)"></span>
-      <strong id="gpClock" style="font-weight:600;color:#0D0D0D;font-variant-numeric:tabular-nums">09:52</strong>
+      <strong id="gpClock" style="font-weight:600;color:#0D0D0D;font-variant-numeric:tabular-nums">09:56</strong>
       <span id="gpClockLabel">Mañana</span>
     </div>
   </div>
