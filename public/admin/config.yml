@@ -6,10 +6,8 @@ backend:
   name: github
   repo: josemob/GreenSite
   branch: main
-  # OAuth de Sveltia. Usa el MISMO worker de autenticación del sitio BLUR,
-  # o despliega sveltia-cms-auth en Cloudflare Workers y pon su URL aquí.
-  # Ej: base_url: https://tu-auth.workers.dev
-  base_url: https://REEMPLAZAR-auth.workers.dev
+  # OAuth de Sveltia — worker desplegado en Cloudflare para Greenpop.
+  base_url: https://sveltia-cms-auth.mobresu.workers.dev
 
 # Carpeta para imágenes que subas desde el panel
 media_folder: public/uploads
@@ -43,6 +41,7 @@ collections:
       - { name: date, label: Fecha, widget: datetime, format: 'YYYY-MM-DD', date_format: 'YYYY-MM-DD', time_format: false, picker_utc: true }
       - { name: author, label: Autor, widget: string, default: 'José Mobresú' }
       - { name: tags, label: Etiquetas, widget: list, default: [], required: false }
+      - { name: cover, label: Portada (opcional), widget: image, required: false, hint: 'Si no subes una, se usa una imagen de marca según la categoría.' }
       - { name: body, label: Contenido, widget: markdown }
 
   - name: projects
@@ -64,6 +63,7 @@ collections:
       - { name: url, label: URL del proyecto, widget: string, required: false }
       - { name: behance, label: Behance, widget: string, required: false }
       - { name: summary, label: Resumen, widget: text }
+      - { name: cover, label: Portada (opcional), widget: image, required: false, hint: 'Si no subes una, se usa una imagen de marca según la categoría.' }
       - { name: services, label: Servicios, widget: list }
       - name: results
         label: Resultados
