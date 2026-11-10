@@ -105,7 +105,7 @@ export default function LandingGP({ html }) {
       const t = new Date().getHours() + new Date().getMinutes() / 60
       return t >= 5 && t < 11 ? 'manana' : t >= 11 && t < 16 ? 'mediodia' : t >= 16 && t < 19.5 ? 'atardecer' : 'noche'
     }
-    let loadedSrc, heroKickWired
+    let loadedSrc, heroWired
     function loadVideo() {
       const key = heroKey()
       const src = '/assets/hero-' + key + '.mp4'
@@ -114,22 +114,26 @@ export default function LandingGP({ html }) {
       v.poster = '/assets/hero-' + key + '.jpg'
       // atributos que habilitan el autoplay silencioso (sobre todo en móvil)
       v.loop = true; v.muted = true; v.defaultMuted = true; v.playsInline = true
-      v.setAttribute('muted', ''); v.setAttribute('playsinline', '')
-      const tryPlay = () => { const p = v.play(); if (p && p.catch) p.catch(() => {}) }
+      v.setAttribute('muted', ''); v.setAttribute('playsinline', ''); v.setAttribute('autoplay', '')
+      const tryPlay = () => {
+        if (!v.paused) return
+        if (v.readyState < 2) { try { v.load() } catch (e) {} }
+        const p = v.play(); if (p && p.catch) p.catch(() => {})
+      }
       v.onended = () => { v.currentTime = 0; tryPlay() }
       // streaming directo (sin blob): primer frame antes y autoplay más fiable
       v.src = src
       v.load()
       tryPlay()
-      v.addEventListener('loadeddata', tryPlay, { once: true })
-      v.addEventListener('canplay', tryPlay, { once: true })
-      // si el navegador bloqueó el autoplay, arrancar al primer gesto del usuario
-      if (!heroKickWired) {
-        heroKickWired = true
-        const kick = () => { if (v.paused) tryPlay() }
-        ;['pointerdown', 'touchstart', 'keydown', 'scroll'].forEach(ev =>
-          window.addEventListener(ev, kick, { once: true, passive: true }))
-        document.addEventListener('visibilitychange', () => { if (!document.hidden && v.paused) tryPlay() })
+      ;['loadeddata', 'canplay', 'canplaythrough'].forEach(ev => v.addEventListener(ev, tryPlay))
+      // reintentos por gesto PERSISTENTES hasta que arranque de verdad (clave en móvil)
+      if (!heroWired) {
+        heroWired = true
+        const gestures = ['pointerdown', 'touchstart', 'touchend', 'click', 'scroll']
+        const kick = () => tryPlay()
+        gestures.forEach(ev => window.addEventListener(ev, kick, { passive: true }))
+        v.addEventListener('playing', () => gestures.forEach(ev => window.removeEventListener(ev, kick)))
+        document.addEventListener('visibilitychange', () => { if (!document.hidden) tryPlay() })
       }
     }
 
