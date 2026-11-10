@@ -123,7 +123,7 @@ export default `<style data-gp-landing>
         <span style="font-weight:700">Resultados que</span>
         <span style="font-weight:300">se notan en caja.</span>
       </h2>
-      <span style="position:relative;display:inline-block;height:calc(clamp(38px,4.4vw,64px) * 2.234);aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:#DCDCD3;flex:none"><video data-lemon-title="" src="/assets/lemon-title.mp4" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block"></video></span>
+      <span style="position:relative;display:inline-block;height:calc(clamp(38px,4.4vw,64px) * 2.234);aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:#DCDCD3;flex:none"><video data-lemon-title="" poster="/assets/lemon-title.jpg" src="/assets/lemon-title.mp4" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block"></video></span>
       </div>
       <p style="margin:0;width:0;min-width:100%;font-size:18px;line-height:1.55;color:#2A2A2A;text-wrap:pretty">No entregamos solo diseño. Cada web sale pensada para convertir visitas en clientes, con CX, velocidad y SEO desde la base.</p>
       </div>
@@ -299,7 +299,7 @@ export default `<style data-gp-landing>
         </div>
       </div>
       <div style="position:relative;aspect-ratio:16/9;margin:0 calc(0px - clamp(28px,3vw,44px));border-radius:0;overflow:hidden;background:#000000">
-        <video data-seq="1" src="/assets/proc-1.mp4?v=2" muted playsinline="" preload="auto" style="width:100%;height:100%;object-fit:cover;display:block"></video><div data-seq-ov="1" style="position:absolute;inset:0;background:#000000;opacity:1;transition:opacity .45s ease;pointer-events:none"></div>
+        <video data-seq="1" poster="/assets/proc-1.jpg" src="/assets/proc-1.mp4?v=2" muted playsinline="" preload="auto" style="width:100%;height:100%;object-fit:cover;display:block"></video><div data-seq-ov="1" style="position:absolute;inset:0;background:#000000;opacity:1;transition:opacity .45s ease;pointer-events:none"></div>
       </div>
       <div style="display:flex;align-items:center;gap:14px">
         <span style="width:40px;height:40px;border-radius:999px;background:#D4FF00;color:#0D0D0D;display:flex;align-items:center;justify-content:center;flex:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg></span>
@@ -315,7 +315,7 @@ export default `<style data-gp-landing>
         </div>
       </div>
       <div style="position:relative;aspect-ratio:16/9;margin:0 calc(0px - clamp(28px,3vw,44px));border-radius:0;overflow:hidden;background:#000000">
-        <video data-seq="2" src="/assets/proc-2.mp4?v=2" muted playsinline="" preload="auto" style="width:100%;height:100%;object-fit:cover;display:block"></video><div data-seq-ov="2" style="position:absolute;inset:0;background:#000000;opacity:1;transition:opacity .45s ease;pointer-events:none"></div>
+        <video data-seq="2" poster="/assets/proc-2.jpg" src="/assets/proc-2.mp4?v=2" muted playsinline="" preload="auto" style="width:100%;height:100%;object-fit:cover;display:block"></video><div data-seq-ov="2" style="position:absolute;inset:0;background:#000000;opacity:1;transition:opacity .45s ease;pointer-events:none"></div>
       </div>
       <div style="display:flex;align-items:center;gap:14px">
         <span style="width:40px;height:40px;border-radius:999px;background:#D4FF00;color:#0D0D0D;display:flex;align-items:center;justify-content:center;flex:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span>
@@ -331,7 +331,7 @@ export default `<style data-gp-landing>
         </div>
       </div>
       <div style="position:relative;aspect-ratio:16/9;margin:0 calc(0px - clamp(28px,3vw,44px));border-radius:0;overflow:hidden;background:#000000">
-        <video data-seq="3" src="/assets/proc-3.mp4?v=2" muted playsinline="" preload="auto" style="width:100%;height:100%;object-fit:cover;display:block"></video><div data-seq-ov="3" style="position:absolute;inset:0;background:#000000;opacity:1;transition:opacity .45s ease;pointer-events:none"></div>
+        <video data-seq="3" poster="/assets/proc-3.jpg" src="/assets/proc-3.mp4?v=2" muted playsinline="" preload="auto" style="width:100%;height:100%;object-fit:cover;display:block"></video><div data-seq-ov="3" style="position:absolute;inset:0;background:#000000;opacity:1;transition:opacity .45s ease;pointer-events:none"></div>
       </div>
       <div style="display:flex;align-items:center;gap:14px">
         <span style="width:40px;height:40px;border-radius:999px;background:#D4FF00;color:#0D0D0D;display:flex;align-items:center;justify-content:center;flex:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.2 2.2 0 0 0-2.9-.1z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.9A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22.4 22.4 0 0 1-4 2z"></path><path d="M9 12H4s.6-3 2-4c1.6-1.1 5 0 5 0"></path><path d="M12 15v5s3-.6 4-2c1.1-1.6 0-5 0-5"></path></svg></span>
@@ -352,7 +352,7 @@ export default `<style data-gp-landing>
         <span style="padding-left:1.1em;color:#D4FF00"><span data-rv="">venden<span style="color:#F3F2F2">.</span></span></span>
       </h2>
       <div style="position:absolute;z-index:0;top:25%;right:0;width:clamp(100px,15vw,220px);aspect-ratio:1/1;border-radius:999px;overflow:hidden;background:#000000;transform:translate(25%,-50%) rotate(-12deg)">
-        <video data-lemon="" src="/assets/lemon-loop.mp4" autoplay="" muted loop="" playsinline="" preload="auto" style="width:100%;height:100%;object-fit:cover;display:block"></video>
+        <video data-lemon="" poster="/assets/lemon-loop.jpg" src="/assets/lemon-loop.mp4" autoplay="" muted loop="" playsinline="" preload="auto" style="width:100%;height:100%;object-fit:cover;display:block"></video>
       </div>
     </div>
     <p data-rv-words="" style="margin:0;max-width:560px;text-align:center;font-size:clamp(18px,1.6vw,22px);line-height:1.5;font-weight:300;color:rgba(243,242,242,.75);text-wrap:balance">No hacemos webs bonitas. Hacemos webs que venden.<span style="display:block"><span style="white-space:nowrap">…ok,</span> sí las hacemos bonitas. Pixel-Perfect, Motion-Ready.</span></p>

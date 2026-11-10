@@ -107,9 +107,11 @@ export default function LandingGP({ html }) {
     }
     let blobUrl, loadedSrc
     async function loadVideo() {
-      const src = '/assets/hero-' + heroKey() + '.mp4'
+      const key = heroKey()
+      const src = '/assets/hero-' + key + '.mp4'
       if (src === loadedSrc) return; loadedSrc = src
       const v = document.getElementById('gpHeroVideo'); if (!v) return retry(loadVideo)
+      v.poster = '/assets/hero-' + key + '.jpg'
       v.loop = true; v.muted = true; v.playsInline = true
       v.onended = () => { v.currentTime = 0; v.play().catch(() => {}) }
       try { const blob = await (await fetch(src)).blob(); if (blobUrl) URL.revokeObjectURL(blobUrl); blobUrl = URL.createObjectURL(blob); v.src = blobUrl }
