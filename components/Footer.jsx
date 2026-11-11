@@ -68,6 +68,8 @@ export default function Footer() {
           <span>© 2026 Greenpop Studio · Pixel-Perfect. Motion-Ready.</span>
           <div className="legal-links">
             <Link href="/privacidad">Privacidad</Link>
+            <Link href="/terminos">Términos</Link>
+            <Link href="/cookies">Cookies</Link>
           </div>
         </div>
       </div>

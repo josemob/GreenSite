@@ -43,8 +43,9 @@ export default function Privacidad() {
 
         <h2>4. Cookies y analítica</h2>
         <p>
-          Usamos cookies propias y de terceros para que el sitio funcione y para medir su rendimiento de forma anónima.
-          Puedes desactivarlas desde tu navegador; algunas funciones podrían verse afectadas.
+          Usamos cookies esenciales para que el sitio funcione y cookies analíticas (Google Analytics) para medir su
+          rendimiento de forma anónima, solo si las aceptas en el aviso de cookies. Puedes gestionarlas desde tu
+          navegador. Más detalles en nuestra <Link href="/cookies">Política de Cookies</Link>.
         </p>
 
         <h2>5. Cuánto tiempo conservamos tus datos</h2>
@@ -61,8 +62,12 @@ export default function Privacidad() {
 
         <h2>9. Contacto</h2>
         <p>
-          ¿Dudas sobre tu privacidad? Escríbenos a <a href="mailto:hola@greenpop.studio">hola@greenpop.studio</a>{' '}
-          <em>(reemplaza por tu correo oficial)</em>.
+          ¿Dudas sobre tu privacidad? Escríbenos a <a href="mailto:mediagreenpop@gmail.com">mediagreenpop@gmail.com</a>.
+        </p>
+
+        <p style={{ marginTop: 28 }}>
+          Ver también nuestros <Link href="/terminos">Términos y Condiciones</Link> y la{' '}
+          <Link href="/cookies">Política de Cookies</Link>.
         </p>
       </div>
     </main>

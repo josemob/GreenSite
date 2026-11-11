@@ -1,5 +1,6 @@
 import './globals.css'
 import Chrome from '../components/Chrome'
+import Analytics from '../components/Analytics'
 
 export const metadata = {
   metadataBase: new URL('https://greenpop.studio'),
@@ -43,6 +44,7 @@ export default function RootLayout({ children }) {
         <div className="pg">
           <Chrome>{children}</Chrome>
         </div>
+        <Analytics />
       </body>
     </html>
   )

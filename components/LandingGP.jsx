@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
+import { WEB3FORMS_KEY } from '../lib/siteConfig'
 
 export default function LandingGP({ html }) {
   useEffect(() => {
@@ -441,7 +442,34 @@ export default function LandingGP({ html }) {
     function initForm() {
       const idle = $('[data-gp-form="idle"]'), done = $('[data-gp-form="done"]')
       if (!idle) return
-      on(idle, 'submit', e => { e.preventDefault(); idle.style.display = 'none'; if (done) done.style.display = 'flex' })
+      const btn = $('button[type="submit"]', idle)
+      const btnLabel = btn ? btn.childNodes[0] : null
+      const setBtn = (t) => { if (btnLabel && btnLabel.nodeType === 3) btnLabel.textContent = t }
+      on(idle, 'submit', async (e) => {
+        e.preventDefault()
+        // Sin clave configurada: modo demo (muestra el panel de éxito sin enviar).
+        if (!WEB3FORMS_KEY) { idle.style.display = 'none'; if (done) done.style.display = 'flex'; return }
+        if (btn) btn.disabled = true
+        setBtn('Enviando…')
+        try {
+          const fd = new FormData(idle)
+          fd.append('access_key', WEB3FORMS_KEY)
+          fd.append('subject', 'Nuevo contacto desde greenpop.studio')
+          fd.append('from_name', 'Greenpop Studio — Web')
+          const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd })
+          const data = await res.json().catch(() => ({}))
+          if (res.ok && data.success) {
+            idle.style.display = 'none'
+            if (done) done.style.display = 'flex'
+          } else {
+            throw new Error(data.message || 'No se pudo enviar')
+          }
+        } catch (err) {
+          if (btn) btn.disabled = false
+          setBtn('Reintentar envío')
+          window.alert('No pudimos enviar tu mensaje ahora mismo. Escríbenos por WhatsApp o inténtalo de nuevo.')
+        }
+      })
     }
 
     // arrancar todo

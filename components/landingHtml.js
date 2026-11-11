@@ -642,7 +642,7 @@ export default `<style data-gp-landing>
     </div>
     <div style="background:#FFFFFF;border-radius:28px;padding:clamp(28px,3.4vw,52px);display:flex;flex-direction:column;justify-content:center">
     
-      <form data-gp-form="idle" style="display:flex;flex-wrap:wrap;gap:24px 20px;align-content:start">
+      <form data-gp-form="idle" style="display:flex;flex-wrap:wrap;gap:24px 20px;align-content:start"><input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none;position:absolute;left:-9999px">
         <label style="display:flex;flex-direction:column;gap:10px;font-size:15px;font-weight:500;color:#0D0D0D;flex:1 1 220px;min-width:0"><span>Hola, mi nombre es… <span style="color:#E5484D">*</span></span>
           <input required="" name="nombre" placeholder="Tu nombre" style="font-size:17px;padding:16px 20px;border:1px solid #E4E3DF;background:#F5F5F3;color:#0D0D0D;border-radius:14px;outline-offset:2px;box-sizing:border-box;width:100%"></input>
         </label>
@@ -710,7 +710,7 @@ export default `<style data-gp-landing>
   </div>
   <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:2px solid rgba(243,242,242,.18);padding-top:24px;font-size:14px;color:rgba(243,242,242,.6)">
     <span>© 2026 Greenpop Studio · Pixel-Perfect. Motion-Ready.</span>
-    <a href="#" style="color:rgba(243,242,242,.8)">Privacidad</a>
+    <span style="display:flex;gap:18px;flex-wrap:wrap"><a href="/privacidad" style="color:rgba(243,242,242,.8)">Privacidad</a><a href="/terminos" style="color:rgba(243,242,242,.8)">Términos</a><a href="/cookies" style="color:rgba(243,242,242,.8)">Cookies</a></span>
   </div>
 </footer>
 </div>
