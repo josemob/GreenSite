@@ -669,7 +669,7 @@ export default `<style data-gp-landing>
       </form>
     
     <div data-gp-form="done" style="display:flex;flex-direction:column;gap:16px;display:none">
-        <div style="font-size:clamp(28px,3vw,40px);font-weight:700;letter-spacing:-.03em">¡Listo! Ya estamos en ello.</div>
+        <div style="font-size:clamp(28px,3vw,40px);font-weight:700;letter-spacing:-.03em">¡Listo! Ya estamos en eso.</div>
         <div style="font-size:18px;line-height:1.5;color:#3A3836">Te escribimos en menos de 24 horas para agendar tu llamada.</div>
       </div>
     
