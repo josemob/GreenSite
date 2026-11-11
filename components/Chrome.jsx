@@ -9,7 +9,7 @@ import ScrollReveal from './ScrollReveal'
 // La landing (/) trae su propia nav, footer y botón de WhatsApp.
 // En el resto de rutas (blog, privacidad, proyectos) usamos el chrome global.
 // Rutas con el diseño nuevo (traen su propia nav/footer/WhatsApp).
-const DESIGN_ROUTES = ['/', '/blog', '/portafolio', '/proyectos']
+const DESIGN_ROUTES = ['/', '/blog', '/portafolio', '/proyectos', '/privacidad', '/terminos', '/cookies']
 
 export default function Chrome({ children }) {
   const pathname = usePathname()

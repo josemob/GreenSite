@@ -7,7 +7,7 @@ export default `<style data-gp-landing>
 @media(max-width:1180px){:root{--gpd:none;--gpm:flex;--gpfoot:1 / -1}}
 @media(min-width:1181px){.gpMobOnly{display:none!important}}
 @media(max-width:1180px){.gpDeskOnly{display:none!important}}
-@media(min-width:1181px){#gpHero{margin-top:32px}}
+@media(min-width:1181px){#gpHero{padding-top:32px!important}}
 @media(max-width:1180px){#gpHero .gpHeroWrap{position:static!important;height:auto!important;min-height:0!important;display:block!important}}
 @media(max-width:1180px){#gpHero .gpHeroVid{height:auto!important;width:100%!important}}
 #gp-root .gph1:hover{color:#0D0D0D!important;text-decoration:none!important}
@@ -710,7 +710,7 @@ export default `<style data-gp-landing>
   </div>
   <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:2px solid rgba(243,242,242,.18);padding-top:24px;font-size:14px;color:rgba(243,242,242,.6)">
     <span>© 2026 Greenpop Studio · Pixel-Perfect. Motion-Ready.</span>
-    <span style="display:flex;gap:18px;flex-wrap:wrap"><a href="/privacidad" style="color:rgba(243,242,242,.8)">Privacidad</a><a href="/terminos" style="color:rgba(243,242,242,.8)">Términos</a><a href="/cookies" style="color:rgba(243,242,242,.8)">Cookies</a></span>
+    <span style="display:flex;gap:18px;flex-wrap:wrap;margin-right:200px"><a href="/privacidad" style="color:rgba(243,242,242,.8)">Privacidad</a><a href="/terminos" style="color:rgba(243,242,242,.8)">Términos</a><a href="/cookies" style="color:rgba(243,242,242,.8)">Cookies</a></span>
   </div>
 </footer>
 </div>

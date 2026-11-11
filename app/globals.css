@@ -223,6 +223,17 @@ footer{border-top:1px solid var(--border);padding:44px 0 40px;}
 .doc a{color:var(--green);}
 .doc strong{color:var(--ink);}
 
+/* Prosa legal con el diseño nuevo (nav/footer Greenpop) */
+.gp-legal{max-width:780px;margin:0 auto;}
+.gp-legal p,.gp-legal li{color:#3A3836;font-size:clamp(16px,1.3vw,18px);line-height:1.75;}
+.gp-legal p{margin:0 0 16px;}
+.gp-legal .lead{font-size:clamp(18px,1.5vw,21px);color:#0D0D0D;margin-bottom:28px;}
+.gp-legal h2{font-family:'Outfit',sans-serif;font-size:clamp(22px,2.4vw,30px);letter-spacing:-.02em;margin:40px 0 12px;color:#0D0D0D;font-weight:700;}
+.gp-legal ul{padding-left:20px;display:grid;gap:8px;margin:0 0 16px;}
+.gp-legal strong{color:#0D0D0D;font-weight:600;}
+.gp-legal a{color:#0D0D0D;text-decoration:underline;text-underline-offset:3px;}
+.gp-legal a:hover{color:#3D5900;}
+
 .blog{padding:clamp(40px,6vw,80px) 0;}
 .blog-head{max-width:720px;margin-bottom:48px;}
 .blog-head h1{font-size:clamp(34px,5.5vw,60px);letter-spacing:-.04em;margin:12px 0;}
