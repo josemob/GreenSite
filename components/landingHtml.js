@@ -207,7 +207,7 @@ export default `<style data-gp-landing>
     <div style="display:flex;flex-direction:column;gap:20px;max-width:720px">
       <div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase">Lo que hacemos</div>
       <h2 style="font-family:'Outfit',sans-serif;margin:0;font-size:clamp(36px,4.4vw,60px);line-height:.98;font-weight:700;letter-spacing:-.03em;text-wrap:balance"><span style="display:block;font-weight:700">Elige lo que tu negocio</span><span style="display:block;font-weight:300">necesita hoy.</span></h2>
-      <p style="margin:0;font-size:18px;line-height:1.55;color:#3A3836;max-width:600px;text-wrap:pretty">Cuatro formatos, un mismo objetivo: que tu web convierta. Precios claros desde el inicio y mantenimiento mensual opcional.</p>
+      <p style="margin:0;font-size:18px;line-height:1.55;color:#3A3836;max-width:600px;text-wrap:pretty">Cuatro formatos, un mismo objetivo: que tu web convierta. Cotización a tu medida según tu proyecto y mantenimiento mensual opcional.</p>
     </div>
     <a class="gph14" href="#contacto" style="display:flex;align-items:center;gap:12px;background:#0D0D0D;color:#F3F2F2;padding:16px 26px;border-radius:999px;font-size:16px;font-weight:600;text-decoration:none">Hablemos <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
   </div>
@@ -219,14 +219,14 @@ export default `<style data-gp-landing>
         <div style="position:absolute;top:clamp(20px,2.4vw,32px);left:clamp(20px,2.4vw,32px);right:clamp(20px,2.4vw,32px);display:flex;justify-content:space-between;align-items:flex-start;gap:16px;color:#FFFFFF;pointer-events:none">
           <div style="font-family:'Outfit',sans-serif;font-size:clamp(28px,2.8vw,42px);font-weight:600;letter-spacing:-.03em;line-height:1">Landing Page</div>
           <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;text-align:right">
-            <div style="font-size:14px;opacity:.85">Desde</div>
-            <div style="font-family:'Outfit',sans-serif;font-size:clamp(26px,2.4vw,36px);font-weight:700;letter-spacing:-.03em;line-height:1">$220</div>
+            <div style="font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;opacity:.8">Precio</div>
+            <div style="font-family:'Outfit',sans-serif;font-size:clamp(26px,2.4vw,36px);font-weight:700;letter-spacing:-.03em;line-height:1">A medida</div>
             <div style="font-size:14px;opacity:.85;padding-top:4px">1–2 semanas</div>
           </div>
         </div>
         <div style="position:absolute;left:clamp(16px,2vw,24px);right:clamp(16px,2vw,24px);bottom:clamp(16px,2vw,24px);display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;pointer-events:none">
           <div style="display:flex;gap:8px;flex-wrap:wrap"><span style="font-size:14px;color:#FFFFFF;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">Diseño a medida</span><span style="font-size:14px;color:#FFFFFF;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">WhatsApp + formulario</span><span style="font-size:14px;color:#FFFFFF;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">SEO básico</span></div>
-          <a class="gph15" href="#contacto" style="pointer-events:auto;display:flex;align-items:center;gap:10px;background:#D4FF00;color:#0D0D0D;padding:9px 16px;border-radius:999px;font-size:15px;font-weight:600;text-decoration:none">Lo quiero <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+          <a class="gph15" href="#contacto" style="pointer-events:auto;display:flex;align-items:center;gap:10px;background:#D4FF00;color:#0D0D0D;padding:9px 16px;border-radius:999px;font-size:15px;font-weight:600;text-decoration:none">Cotizar <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
         </div>
       </div>
       <div data-svc-card="" style="position:relative;aspect-ratio:1/1;border-radius:24px;overflow:hidden;background:#DCDCD3">
@@ -235,14 +235,14 @@ export default `<style data-gp-landing>
         <div style="position:absolute;top:clamp(20px,2.4vw,32px);left:clamp(20px,2.4vw,32px);right:clamp(20px,2.4vw,32px);display:flex;justify-content:space-between;align-items:flex-start;gap:16px;color:#FFFFFF;pointer-events:none">
           <div style="font-family:'Outfit',sans-serif;font-size:clamp(28px,2.8vw,42px);font-weight:600;letter-spacing:-.03em;line-height:1">Tienda / Portal</div>
           <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;text-align:right">
-            <div style="font-size:14px;opacity:.85">Desde</div>
-            <div style="font-family:'Outfit',sans-serif;font-size:clamp(26px,2.4vw,36px);font-weight:700;letter-spacing:-.03em;line-height:1">$950</div>
+            <div style="font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;opacity:.8">Precio</div>
+            <div style="font-family:'Outfit',sans-serif;font-size:clamp(26px,2.4vw,36px);font-weight:700;letter-spacing:-.03em;line-height:1">A medida</div>
             <div style="font-size:14px;opacity:.85;padding-top:4px">6–8 semanas</div>
           </div>
         </div>
         <div style="position:absolute;left:clamp(16px,2vw,24px);right:clamp(16px,2vw,24px);bottom:clamp(16px,2vw,24px);display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;pointer-events:none">
           <div style="display:flex;gap:8px;flex-wrap:wrap"><span style="font-size:14px;color:#FFFFFF;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">Catálogo</span><span style="font-size:14px;color:#FFFFFF;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">Pagos</span><span style="font-size:14px;color:#FFFFFF;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">Panel de pedidos</span></div>
-          <a class="gph16" href="#contacto" style="pointer-events:auto;display:flex;align-items:center;gap:10px;background:#D4FF00;color:#0D0D0D;padding:9px 16px;border-radius:999px;font-size:15px;font-weight:600;text-decoration:none">Lo quiero <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+          <a class="gph16" href="#contacto" style="pointer-events:auto;display:flex;align-items:center;gap:10px;background:#D4FF00;color:#0D0D0D;padding:9px 16px;border-radius:999px;font-size:15px;font-weight:600;text-decoration:none">Cotizar <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
         </div>
       </div>
     </div>
@@ -253,14 +253,14 @@ export default `<style data-gp-landing>
         <div style="position:absolute;top:clamp(20px,2.4vw,32px);left:clamp(20px,2.4vw,32px);right:clamp(20px,2.4vw,32px);display:flex;justify-content:space-between;align-items:flex-start;gap:16px;color:#FFFFFF;pointer-events:none">
           <div style="font-family:'Outfit',sans-serif;font-size:clamp(28px,2.8vw,42px);font-weight:600;letter-spacing:-.03em;line-height:1">Web Corporativa</div>
           <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;text-align:right">
-            <div style="font-size:14px;opacity:.85">Desde</div>
-            <div style="font-family:'Outfit',sans-serif;font-size:clamp(26px,2.4vw,36px);font-weight:700;letter-spacing:-.03em;line-height:1">$450</div>
+            <div style="font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;opacity:.8">Precio</div>
+            <div style="font-family:'Outfit',sans-serif;font-size:clamp(26px,2.4vw,36px);font-weight:700;letter-spacing:-.03em;line-height:1">A medida</div>
             <div style="font-size:14px;opacity:.85;padding-top:4px">3–4 semanas</div>
           </div>
         </div>
         <div style="position:absolute;left:clamp(16px,2vw,24px);right:clamp(16px,2vw,24px);bottom:clamp(16px,2vw,24px);display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;pointer-events:none">
           <div style="display:flex;gap:8px;flex-wrap:wrap"><span style="font-size:14px;color:#FFFFFF;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">Hasta 6 secciones</span><span style="font-size:14px;color:#FFFFFF;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">Blog</span><span style="font-size:14px;color:#FFFFFF;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">Panel editable</span></div>
-          <a class="gph17" href="#contacto" style="pointer-events:auto;display:flex;align-items:center;gap:10px;background:#D4FF00;color:#0D0D0D;padding:9px 16px;border-radius:999px;font-size:15px;font-weight:600;text-decoration:none">Lo quiero <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+          <a class="gph17" href="#contacto" style="pointer-events:auto;display:flex;align-items:center;gap:10px;background:#D4FF00;color:#0D0D0D;padding:9px 16px;border-radius:999px;font-size:15px;font-weight:600;text-decoration:none">Cotizar <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
         </div>
       </div>
       <div data-svc-card="" style="position:relative;aspect-ratio:3/2;border-radius:24px;overflow:hidden;background:#DCDCD3">
@@ -269,14 +269,14 @@ export default `<style data-gp-landing>
         <div style="position:absolute;top:clamp(20px,2.4vw,32px);left:clamp(20px,2.4vw,32px);right:clamp(20px,2.4vw,32px);display:flex;justify-content:space-between;align-items:flex-start;gap:16px;color:#FFFFFF;pointer-events:none">
           <div style="font-family:'Outfit',sans-serif;font-size:clamp(28px,2.8vw,42px);font-weight:600;letter-spacing:-.03em;line-height:1">App Móvil</div>
           <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;text-align:right">
-            <div style="font-size:14px;opacity:.85">Desde</div>
-            <div style="font-family:'Outfit',sans-serif;font-size:clamp(26px,2.4vw,36px);font-weight:700;letter-spacing:-.03em;line-height:1">$1.200</div>
+            <div style="font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;opacity:.8">Precio</div>
+            <div style="font-family:'Outfit',sans-serif;font-size:clamp(26px,2.4vw,36px);font-weight:700;letter-spacing:-.03em;line-height:1">A medida</div>
             <div style="font-size:14px;opacity:.85;padding-top:4px">8–12 semanas</div>
           </div>
         </div>
         <div style="position:absolute;left:clamp(16px,2vw,24px);right:clamp(16px,2vw,24px);bottom:clamp(16px,2vw,24px);display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;pointer-events:none">
           <div style="display:flex;gap:8px;flex-wrap:wrap"><span style="font-size:14px;color:#FFFFFF;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">iOS + Android</span><span style="font-size:14px;color:#FFFFFF;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">UX/UI</span><span style="font-size:14px;color:#FFFFFF;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">Publicación</span></div>
-          <a class="gph18" href="#contacto" style="pointer-events:auto;display:flex;align-items:center;gap:10px;background:#D4FF00;color:#0D0D0D;padding:9px 16px;border-radius:999px;font-size:15px;font-weight:600;text-decoration:none">Lo quiero <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+          <a class="gph18" href="#contacto" style="pointer-events:auto;display:flex;align-items:center;gap:10px;background:#D4FF00;color:#0D0D0D;padding:9px 16px;border-radius:999px;font-size:15px;font-weight:600;text-decoration:none">Cotizar <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
         </div>
       </div>
     </div>
