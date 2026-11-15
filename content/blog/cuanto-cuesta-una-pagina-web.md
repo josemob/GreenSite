@@ -8,7 +8,7 @@ tags: ["Precios", "Guía"]
 
 Es la primera pregunta de todos, y la respuesta honesta es: **depende de lo que necesites**. Pero eso no ayuda mucho, así que aquí van rangos claros y qué incluye cada uno.
 
-## Landing Page — desde $350
+## Landing Page — desde $220
 
 Una sola página, enfocada en vender un producto o servicio. Perfecta para una campaña, un lanzamiento o para empezar.
 
@@ -16,15 +16,15 @@ Una sola página, enfocada en vender un producto o servicio. Perfecta para una c
 - Formulario de contacto
 - Lista para Google
 
-## Web Corporativa — desde $650
+## Web Corporativa — desde $450
 
 Tu web completa: varias secciones, que **tú mismo puedes actualizar**. Ideal para dar una imagen profesional y completa.
 
-## Tienda / Portal — desde $1.800
+## Tienda / Portal — desde $950
 
 Vende por internet o dales a tus clientes un portal privado. Incluye pagos e integraciones.
 
-## App Móvil — desde $2.500
+## App Móvil — desde $1.200
 
 Tu propia app para iPhone y Android, hecha a la medida de tu negocio.
 

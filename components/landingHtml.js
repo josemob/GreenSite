@@ -220,7 +220,7 @@ export default `<style data-gp-landing>
           <div style="font-family:'Outfit',sans-serif;font-size:clamp(28px,2.8vw,42px);font-weight:600;letter-spacing:-.03em;line-height:1">Landing Page</div>
           <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;text-align:right">
             <div style="font-size:14px;opacity:.85">Desde</div>
-            <div style="font-family:'Outfit',sans-serif;font-size:clamp(26px,2.4vw,36px);font-weight:700;letter-spacing:-.03em;line-height:1">$350</div>
+            <div style="font-family:'Outfit',sans-serif;font-size:clamp(26px,2.4vw,36px);font-weight:700;letter-spacing:-.03em;line-height:1">$220</div>
             <div style="font-size:14px;opacity:.85;padding-top:4px">1–2 semanas</div>
           </div>
         </div>
@@ -236,7 +236,7 @@ export default `<style data-gp-landing>
           <div style="font-family:'Outfit',sans-serif;font-size:clamp(28px,2.8vw,42px);font-weight:600;letter-spacing:-.03em;line-height:1">Tienda / Portal</div>
           <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;text-align:right">
             <div style="font-size:14px;opacity:.85">Desde</div>
-            <div style="font-family:'Outfit',sans-serif;font-size:clamp(26px,2.4vw,36px);font-weight:700;letter-spacing:-.03em;line-height:1">$1.800</div>
+            <div style="font-family:'Outfit',sans-serif;font-size:clamp(26px,2.4vw,36px);font-weight:700;letter-spacing:-.03em;line-height:1">$950</div>
             <div style="font-size:14px;opacity:.85;padding-top:4px">6–8 semanas</div>
           </div>
         </div>
@@ -254,7 +254,7 @@ export default `<style data-gp-landing>
           <div style="font-family:'Outfit',sans-serif;font-size:clamp(28px,2.8vw,42px);font-weight:600;letter-spacing:-.03em;line-height:1">Web Corporativa</div>
           <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;text-align:right">
             <div style="font-size:14px;opacity:.85">Desde</div>
-            <div style="font-family:'Outfit',sans-serif;font-size:clamp(26px,2.4vw,36px);font-weight:700;letter-spacing:-.03em;line-height:1">$650</div>
+            <div style="font-family:'Outfit',sans-serif;font-size:clamp(26px,2.4vw,36px);font-weight:700;letter-spacing:-.03em;line-height:1">$450</div>
             <div style="font-size:14px;opacity:.85;padding-top:4px">3–4 semanas</div>
           </div>
         </div>
@@ -270,7 +270,7 @@ export default `<style data-gp-landing>
           <div style="font-family:'Outfit',sans-serif;font-size:clamp(28px,2.8vw,42px);font-weight:600;letter-spacing:-.03em;line-height:1">App Móvil</div>
           <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;text-align:right">
             <div style="font-size:14px;opacity:.85">Desde</div>
-            <div style="font-family:'Outfit',sans-serif;font-size:clamp(26px,2.4vw,36px);font-weight:700;letter-spacing:-.03em;line-height:1">$2.500</div>
+            <div style="font-family:'Outfit',sans-serif;font-size:clamp(26px,2.4vw,36px);font-weight:700;letter-spacing:-.03em;line-height:1">$1.200</div>
             <div style="font-size:14px;opacity:.85;padding-top:4px">8–12 semanas</div>
           </div>
         </div>
