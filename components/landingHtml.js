@@ -220,7 +220,7 @@ export default `<style data-gp-landing>
           <div style="font-family:'Outfit',sans-serif;font-size:clamp(28px,2.8vw,42px);font-weight:600;letter-spacing:-.03em;line-height:1">Landing Page</div>
           <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;text-align:right">
             <div style="font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;opacity:.8">Precio</div>
-            <div style="font-family:'Outfit',sans-serif;font-size:clamp(26px,2.4vw,36px);font-weight:700;letter-spacing:-.03em;line-height:1">A medida</div>
+            <div style="font-family:'Outfit',sans-serif;font-size:clamp(19px,1.9vw,26px);font-weight:700;letter-spacing:-.03em;line-height:1">Para arrancar</div>
             <div style="font-size:14px;opacity:.85;padding-top:4px">1–2 semanas</div>
           </div>
         </div>
@@ -236,7 +236,7 @@ export default `<style data-gp-landing>
           <div style="font-family:'Outfit',sans-serif;font-size:clamp(28px,2.8vw,42px);font-weight:600;letter-spacing:-.03em;line-height:1">Tienda / Portal</div>
           <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;text-align:right">
             <div style="font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;opacity:.8">Precio</div>
-            <div style="font-family:'Outfit',sans-serif;font-size:clamp(26px,2.4vw,36px);font-weight:700;letter-spacing:-.03em;line-height:1">A medida</div>
+            <div style="font-family:'Outfit',sans-serif;font-size:clamp(19px,1.9vw,26px);font-weight:700;letter-spacing:-.03em;line-height:1">Escala contigo</div>
             <div style="font-size:14px;opacity:.85;padding-top:4px">6–8 semanas</div>
           </div>
         </div>
@@ -254,7 +254,7 @@ export default `<style data-gp-landing>
           <div style="font-family:'Outfit',sans-serif;font-size:clamp(28px,2.8vw,42px);font-weight:600;letter-spacing:-.03em;line-height:1">Web Corporativa</div>
           <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;text-align:right">
             <div style="font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;opacity:.8">Precio</div>
-            <div style="font-family:'Outfit',sans-serif;font-size:clamp(26px,2.4vw,36px);font-weight:700;letter-spacing:-.03em;line-height:1">A medida</div>
+            <div style="font-family:'Outfit',sans-serif;font-size:clamp(19px,1.9vw,26px);font-weight:700;letter-spacing:-.03em;line-height:1">A tu medida</div>
             <div style="font-size:14px;opacity:.85;padding-top:4px">3–4 semanas</div>
           </div>
         </div>
@@ -270,7 +270,7 @@ export default `<style data-gp-landing>
           <div style="font-family:'Outfit',sans-serif;font-size:clamp(28px,2.8vw,42px);font-weight:600;letter-spacing:-.03em;line-height:1">App Móvil</div>
           <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;text-align:right">
             <div style="font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;opacity:.8">Precio</div>
-            <div style="font-family:'Outfit',sans-serif;font-size:clamp(26px,2.4vw,36px);font-weight:700;letter-spacing:-.03em;line-height:1">A medida</div>
+            <div style="font-family:'Outfit',sans-serif;font-size:clamp(19px,1.9vw,26px);font-weight:700;letter-spacing:-.03em;line-height:1">Sin límites</div>
             <div style="font-size:14px;opacity:.85;padding-top:4px">8–12 semanas</div>
           </div>
         </div>
