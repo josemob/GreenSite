@@ -3,7 +3,7 @@ title: "Aurora Arquitectura"
 client: "Aurora Estudio"
 category: "Portfolio / Sitio"
 year: "2025"
-order: 2
+order: 6
 url: "https://example.com"
 behance: "https://www.behance.net/greenpopstudio"
 summary: "Un portfolio editorial que hace que su arquitectura hable por sí sola."

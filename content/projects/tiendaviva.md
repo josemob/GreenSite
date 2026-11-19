@@ -3,7 +3,7 @@ title: "TiendaViva"
 client: "TiendaViva"
 category: "Tienda Online"
 year: "2026"
-order: 3
+order: 7
 url: "https://example.com"
 behance: "https://www.behance.net/greenpopstudio"
 summary: "Una tienda online rápida y clara que convirtió visitas en ventas de verdad."
