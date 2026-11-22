@@ -472,8 +472,42 @@ export default function LandingGP({ html }) {
       })
     }
 
+    // ---- intro del hero (solo desktop): video de pequeño a grande + texto con blur progresivo ----
+    function initHeroIntro() {
+      if (window.innerWidth <= 1180) return
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+      const hero = document.getElementById('gpHero'); if (!hero) return retry(initHeroIntro)
+      const vid = hero.querySelector('.gpHeroVid')
+      const h1 = hero.querySelector('h1')
+      const sub = hero.querySelector('p')
+      const cta = sub && sub.nextElementSibling
+      if (!vid || !h1 || !sub || !cta) return retry(initHeroIntro)
+      const textEls = [h1, sub, cta]
+      // estado inicial
+      vid.style.transformOrigin = 'center center'
+      vid.style.transform = 'scale(.58)'
+      vid.style.opacity = '0'
+      vid.style.willChange = 'transform,opacity'
+      textEls.forEach(el => { el.style.opacity = '0'; el.style.filter = 'blur(16px)'; el.style.transform = 'translateY(20px)'; el.style.willChange = 'opacity,filter,transform' })
+      // 1) el video crece
+      rafs.push(requestAnimationFrame(() => rafs.push(requestAnimationFrame(() => {
+        vid.style.transition = 'transform 1s cubic-bezier(.2,.85,.25,1), opacity .85s ease'
+        vid.style.transform = 'scale(1)'
+        vid.style.opacity = '1'
+      }))))
+      // 2) entra el texto con blur progresivo, escalonado, tras el video
+      const t = setTimeout(() => {
+        textEls.forEach((el, i) => {
+          const d = i * 0.14
+          el.style.transition = 'opacity .7s ease ' + d + 's, filter 1s cubic-bezier(.2,.8,.2,1) ' + d + 's, transform 1s cubic-bezier(.2,.8,.2,1) ' + d + 's'
+          el.style.opacity = '1'; el.style.filter = 'blur(0px)'; el.style.transform = 'none'
+        })
+      }, 620)
+      D.push(() => clearTimeout(t))
+    }
+
     // arrancar todo
-    initReveal(); initStatHover(); initLemonTitle(); initNav(); initClock(); loadVideo(); initSeq(); initFlap(); initSvc(); initLemon(); initTst(); initPf(); initPfHover(); initProb(); initMenu(); initFaq(); initBlog(); initPfm(); initForm()
+    initReveal(); initStatHover(); initLemonTitle(); initNav(); initClock(); loadVideo(); initSeq(); initFlap(); initSvc(); initLemon(); initTst(); initPf(); initPfHover(); initProb(); initMenu(); initFaq(); initBlog(); initPfm(); initForm(); initHeroIntro()
 
     return () => {
       D.forEach(fn => { try { fn() } catch (e) {} })
