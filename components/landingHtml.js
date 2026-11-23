@@ -632,7 +632,7 @@ export default `<style data-gp-landing>
 <section id="contacto" data-screen-label="Contacto" style="background:#F3F2F2;color:#0D0D0D;padding:clamp(48px,6vw,80px) clamp(12px,1.4vw,20px);scroll-margin-top:0">
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:clamp(12px,1.4vw,24px);align-items:stretch;max-width:1440px;margin:0 auto">
     <div style="position:relative;min-height:clamp(420px,50vw,760px);border-radius:28px;overflow:hidden;background:#3A3A36">
-      <img src="/assets/contact-bg-2.jpg" alt="" style="position:absolute;inset:-32px;width:calc(100% + 64px);height:calc(100% + 64px);object-fit:cover;object-position:70% center;filter:blur(6px);transform:scale(1.04)"></img>
+      <img src="/assets/contact-call.jpg" alt="" style="position:absolute;inset:-32px;width:calc(100% + 64px);height:calc(100% + 64px);object-fit:cover;object-position:center;filter:blur(6px);transform:scale(1.04)"></img>
       <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,13,13,.35) 0%,rgba(13,13,13,0) 45%,rgba(13,13,13,.25) 100%);pointer-events:none"></div>
       <div style="position:absolute;left:0;right:0;top:0;padding:clamp(28px,3.4vw,52px);display:flex;flex-direction:column;gap:20px;color:#FFFFFF;pointer-events:none">
         <div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase">Hablemos</div>
