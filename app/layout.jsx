@@ -24,12 +24,14 @@ export const metadata = {
     title: 'Greenpop Studio — Webs y apps que venden',
     description: 'Diseño y desarrollo web premium, hecho para vender. Venezuela & Latam.',
     url: 'https://greenpop.studio',
-    locale: 'es_ES'
+    locale: 'es_ES',
+    images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'Greenpop Studio — Webs y apps que venden' }]
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Greenpop Studio — Webs y apps que venden',
-    description: 'Diseño y desarrollo web premium, hecho para vender. Venezuela & Latam.'
+    description: 'Diseño y desarrollo web premium, hecho para vender. Venezuela & Latam.',
+    images: ['/og.jpg']
   }
 }
 

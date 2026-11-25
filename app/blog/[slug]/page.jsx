@@ -13,11 +13,13 @@ export async function generateMetadata({ params }) {
   const { slug } = await params
   const post = await getPost(slug)
   if (!post) return {}
+  const cover = coverFor(post.cover, (post.tags && post.tags[0]) || 'Artículo', 0)
   return {
     title: post.title,
     description: post.description,
     alternates: { canonical: `/blog/${slug}` },
-    openGraph: { title: post.title, description: post.description, type: 'article' }
+    openGraph: { title: post.title, description: post.description, type: 'article', images: [{ url: cover, width: 1200, height: 630, alt: post.title }] },
+    twitter: { card: 'summary_large_image', title: post.title, description: post.description, images: [cover] }
   }
 }
 

@@ -13,11 +13,13 @@ export async function generateMetadata({ params }) {
   const { slug } = await params
   const p = await getProject(slug)
   if (!p) return {}
+  const cover = coverFor(p.cover, p.category, 0)
   return {
     title: `${p.title} — ${p.category}`,
     description: p.summary,
     alternates: { canonical: `/proyectos/${slug}` },
-    openGraph: { title: p.title, description: p.summary, type: 'article' }
+    openGraph: { title: p.title, description: p.summary, type: 'article', images: [{ url: cover, width: 1200, height: 630, alt: p.title }] },
+    twitter: { card: 'summary_large_image', title: p.title, description: p.summary, images: [cover] }
   }
 }
 

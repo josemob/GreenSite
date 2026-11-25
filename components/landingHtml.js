@@ -701,7 +701,7 @@ export default `<style data-gp-landing>
     </div>
     <div style="display:flex;flex-direction:column;gap:12px;font-size:15px">
       <div style="font-size:12px;font-weight:600;letter-spacing:.14em;color:rgba(243,242,242,.5);padding-bottom:4px">ESTUDIO</div>
-      <a href="#proceso" style="color:#F3F2F2">Cómo trabajamos</a><a href="/portafolio" style="color:#F3F2F2">Portafolio</a><a href="/blog" style="color:#F3F2F2">Blog</a>
+      <a href="#proceso" style="color:#F3F2F2">Cómo trabajamos</a><a href="/portafolio" style="color:#F3F2F2">Portafolio</a><a href="/blog" style="color:#F3F2F2">Blog</a><a href="/audita" style="color:#D4FF00;font-weight:600">Audita tu web gratis</a>
     </div>
     <div style="display:flex;flex-direction:column;gap:12px;font-size:15px">
       <div style="font-size:12px;font-weight:600;letter-spacing:.14em;color:rgba(243,242,242,.5);padding-bottom:4px">CONTACTO</div>
