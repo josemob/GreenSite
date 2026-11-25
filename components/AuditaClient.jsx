@@ -108,17 +108,8 @@ export default function AuditaClient() {
   const pill = (bg, fg) => ({ display: 'inline-flex', alignItems: 'center', gap: 10, background: bg, color: fg, padding: '14px 24px', borderRadius: 999, fontWeight: 600, fontSize: 16, textDecoration: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit' })
 
   return (
-    <main style={{ minHeight: '100vh', background: PAPER, color: INK, fontFamily: "'Outfit', sans-serif" }}>
-      {/* top bar */}
-      <header style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '22px clamp(20px,4vw,48px)', maxWidth: 1100, margin: '0 auto' }}>
-        <a href="/" style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none', color: INK }}>
-          <span style={{ fontWeight: 700, fontSize: 24, letterSpacing: '-.02em' }}>Greenpop Studio</span>
-          <span style={{ width: 12, height: 12, borderRadius: 999, background: GREEN }} />
-        </a>
-        <a href="/#contacto" style={pill(INK, PAPER)}>Agenda una llamada</a>
-      </header>
-
-      <div style={{ maxWidth: 900, margin: '0 auto', padding: 'clamp(28px,5vw,64px) clamp(20px,4vw,48px) 96px' }}>
+    <section style={{ color: INK, fontFamily: "'Outfit', sans-serif" }}>
+      <div style={{ maxWidth: 1440, margin: '0 auto', padding: 'clamp(16px,3vw,40px) clamp(20px,4vw,48px) clamp(64px,8vw,104px)' }}>
         {/* hero / input */}
         <div style={{ fontSize: 13, fontWeight: 600, letterSpacing: '.14em', textTransform: 'uppercase', color: '#3A3836' }}>Auditoría gratis</div>
         <h1 style={{ fontSize: 'clamp(38px,6vw,76px)', lineHeight: .98, letterSpacing: '-.04em', margin: '14px 0 16px', fontWeight: 700 }}>
@@ -200,6 +191,6 @@ export default function AuditaClient() {
           </div>
         )}
       </div>
-    </main>
+    </section>
   )
 }

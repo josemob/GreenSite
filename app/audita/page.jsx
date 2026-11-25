@@ -1,4 +1,6 @@
 import AuditaClient from '../../components/AuditaClient'
+import GPSubpageClient from '../../components/GPSubpageClient'
+import { renderChrome } from '../../lib/chrome'
 
 export const metadata = {
   title: 'Auditoría gratis — ¿Tu web vende?',
@@ -14,5 +16,16 @@ export const metadata = {
 }
 
 export default function AuditaPage() {
-  return <AuditaClient />
+  const { top, bottom, css } = renderChrome()
+  return (
+    <>
+      <style dangerouslySetInnerHTML={{ __html: css }} />
+      <div id="gp-root" style={{ fontFamily: "'Outfit', sans-serif", background: '#F3F2F2', color: '#0D0D0D', minHeight: '100vh', overflowX: 'clip' }}>
+        <div dangerouslySetInnerHTML={{ __html: top }} />
+        <AuditaClient />
+        <div dangerouslySetInnerHTML={{ __html: bottom }} />
+      </div>
+      <GPSubpageClient />
+    </>
+  )
 }
