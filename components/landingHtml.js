@@ -59,6 +59,7 @@ export default `<style data-gp-landing>
       <a class="gph2" href="#proceso" style="color:#0D0D0D;position:relative;z-index:1;padding:8px 14px;border-radius:999px;text-decoration:none">Cómo trabajamos</a>
       <a class="gph3" href="/portafolio" style="color:#0D0D0D;position:relative;z-index:1;padding:8px 14px;border-radius:999px;text-decoration:none">Portafolio</a>
       <a class="gph4" href="/blog" style="color:#0D0D0D;position:relative;z-index:1;padding:8px 14px;border-radius:999px;text-decoration:none">Blog</a>
+      <a href="/audita" style="color:#0D0D0D;position:relative;z-index:1;padding:8px 14px;border-radius:999px;text-decoration:none">Auditoría gratis</a>
     </nav>
   </div>
   <a class="gph5" href="#contacto" style="display:var(--gpd,flex);align-items:center;gap:10px;background:#D4FF00;color:#0D0D0D;padding:10px 20px;border-radius:999px;font-size:16px;font-weight:600;text-decoration:none;white-space:nowrap;box-shadow:0 6px 28px rgba(212,255,0,.55)">Agenda una llamada gratis<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></a>
@@ -73,6 +74,7 @@ export default `<style data-gp-landing>
       <a class="gph7" href="#proceso" data-gp="menuClose" style="color:#FFFFFF;font-size:clamp(34px,9vw,44px);font-weight:600;letter-spacing:-.03em;line-height:1.1;text-decoration:none">Cómo trabajamos</a>
       <a class="gph8" href="/portafolio" data-gp="menuClose" style="color:#FFFFFF;font-size:clamp(34px,9vw,44px);font-weight:600;letter-spacing:-.03em;line-height:1.1;text-decoration:none">Portafolio</a>
       <a class="gph9" href="/blog" data-gp="menuClose" style="color:#FFFFFF;font-size:clamp(34px,9vw,44px);font-weight:600;letter-spacing:-.03em;line-height:1.1;text-decoration:none">Blog</a>
+      <a href="/audita" data-gp="menuClose" style="color:#FFFFFF;font-size:clamp(34px,9vw,44px);font-weight:600;letter-spacing:-.03em;line-height:1.1;text-decoration:none">Auditoría gratis</a>
   </div>
   <div style="display:flex;flex-direction:column;align-items:center;gap:20px;width:100%">
     <a class="gph10" href="#contacto" data-gp="menuClose" style="display:flex;align-items:center;justify-content:center;gap:10px;background:#D4FF00;color:#0D0D0D;padding:12px 22px;border-radius:999px;font-size:16px;font-weight:600;text-decoration:none">Agenda una llamada gratis</a>
