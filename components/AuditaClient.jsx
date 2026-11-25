@@ -10,6 +10,100 @@ const WA = 'https://wa.me/584128172712?text=' + encodeURIComponent('Hola Greenpo
 const colorFor = (s) => (s >= 90 ? GOOD : s >= 50 ? MID : BAD)
 const labelFor = (s) => (s >= 90 ? 'Bien' : s >= 50 ? 'Mejorable' : 'Crítico')
 
+const MB = 1048576
+const fmtBytes = (n) => {
+  if (!n || n < 1024) return (Math.round(n) || 0) + ' B'
+  const kb = n / 1024
+  if (kb < 1024) return Math.round(kb) + ' KB'
+  const mb = kb / 1024
+  return (mb < 10 ? mb.toFixed(1) : Math.round(mb)) + ' MB'
+}
+
+const WEIGHT_CATS = [
+  { key: 'image', label: 'Imágenes', color: '#16A34A' },
+  { key: 'media', label: 'Video', color: '#E0960B' },
+  { key: 'code', label: 'Código (JS/CSS)', color: '#0D0D0D' },
+  { key: 'font', label: 'Fuentes', color: '#8A8A86' },
+  { key: 'other', label: 'Otros', color: '#CBCAC6' }
+]
+
+// Desglosa el peso de la página (bytes transferidos) por tipo, desde Lighthouse.
+function buildWeight(a) {
+  const rs = a['resource-summary']?.details?.items || []
+  if (!rs.length) return null
+  const by = {}
+  rs.forEach((i) => { by[i.resourceType] = i.transferSize || 0 })
+  const total = by.total || a['total-byte-weight']?.numericValue || 0
+  if (!total) return null
+  const groups = {
+    image: by.image || 0,
+    media: by.media || 0,
+    code: (by.script || 0) + (by.stylesheet || 0),
+    font: by.font || 0,
+    other: Math.max(0, (by.document || 0) + (by.other || 0))
+  }
+  const sav = (id) => a[id]?.details?.overallSavingsBytes || 0
+  const imgSavings = sav('uses-optimized-images') + sav('modern-image-formats') + sav('uses-responsive-images') + sav('offscreen-images')
+  const vidSavings = sav('efficient-animated-content')
+  return { total, groups, imgSavings, vidSavings }
+}
+
+// Recomendaciones en lenguaje claro según el peso.
+function weightRecs(w) {
+  const recs = []
+  const totalMB = w.total / MB
+  const imgShare = w.total ? w.groups.image / w.total : 0
+  if (totalMB > 4) recs.push({ t: 'Tu página pesa de más', d: `Son ${fmtBytes(w.total)} y eso se siente en móvil. Una web rápida suele quedar por debajo de 2 MB.` })
+  else if (totalMB > 2.5) recs.push({ t: 'Hay margen para aligerar', d: `La página pesa ${fmtBytes(w.total)}; se puede recortar bastante para cargar más rápido en celulares.` })
+  if (w.groups.image > 1.2 * MB || imgShare > 0.45) {
+    const ahorro = w.imgSavings > 50 * 1024 ? ` Podrías ahorrar ~${fmtBytes(w.imgSavings)} comprimiéndolas y usando WebP/AVIF.` : ' Comprimirlas y usar formatos modernos (WebP/AVIF) las aligera mucho.'
+    recs.push({ t: 'Las imágenes mandan en el peso', d: `Son el ${Math.round(imgShare * 100)}% del total (${fmtBytes(w.groups.image)}).${ahorro}` })
+  }
+  if (w.groups.media > 1.5 * MB) {
+    recs.push({ t: 'Los videos pesan mucho', d: `Suman ${fmtBytes(w.groups.media)}. Conviene comprimirlos, mostrar una imagen de portada mientras cargan y cargarlos solo al verse — o servirlos desde un reproductor (YouTube, Vimeo o Cloudflare Stream).` })
+  }
+  if (!recs.length) recs.push({ t: '¡Buen peso!', d: `La página pesa ${fmtBytes(w.total)} y está bien balanceada. Mantenla así al sumar contenido.` })
+  return recs
+}
+
+function WeightPanel({ w }) {
+  if (!w) return null
+  const segs = WEIGHT_CATS.map((c) => ({ ...c, bytes: w.groups[c.key] || 0 })).filter((s) => s.bytes > 0)
+  const total = w.total || segs.reduce((n, s) => n + s.bytes, 0)
+  if (!total) return null
+  const recs = weightRecs(w)
+  return (
+    <div style={{ marginTop: 36 }}>
+      <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap', marginBottom: 14 }}>
+        <h3 style={{ fontSize: 'clamp(20px,2.2vw,30px)', fontWeight: 700, letterSpacing: '-.02em', margin: 0 }}>Peso de la página</h3>
+        <div style={{ fontSize: 15, color: '#6B6A66' }}>Total: <strong style={{ color: INK }}>{fmtBytes(total)}</strong></div>
+      </div>
+      <div style={{ display: 'flex', height: 18, borderRadius: 999, overflow: 'hidden', background: '#E4E3DF' }}>
+        {segs.map((s) => <div key={s.key} title={`${s.label}: ${fmtBytes(s.bytes)}`} style={{ width: (s.bytes / total * 100) + '%', background: s.color }} />)}
+      </div>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(150px,1fr))', gap: 14, marginTop: 18 }}>
+        {segs.map((s) => (
+          <div key={s.key} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+            <span style={{ width: 12, height: 12, borderRadius: 4, background: s.color, flex: 'none' }} />
+            <div>
+              <div style={{ fontSize: 14, color: '#3A3836' }}>{s.label}</div>
+              <div style={{ fontSize: 18, fontWeight: 700, letterSpacing: '-.01em' }}>{fmtBytes(s.bytes)} <span style={{ fontSize: 13, fontWeight: 500, color: '#8a8a86' }}>· {Math.round(s.bytes / total * 100)}%</span></div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginTop: 22 }}>
+        {recs.map((r, i) => (
+          <div key={i} style={{ background: '#fff', borderRadius: 16, padding: '16px 18px', borderLeft: `4px solid ${GREEN}` }}>
+            <div style={{ fontWeight: 700, fontSize: 16 }}>{r.t}</div>
+            <div style={{ fontSize: 15, color: '#3A3836', marginTop: 4, lineHeight: 1.5 }}>{r.d}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 function Ring({ score, size = 168, stroke = 14, big }) {
   const r = (size - stroke) / 2
   const C = 2 * Math.PI * r
@@ -72,7 +166,8 @@ export default function AuditaClient() {
           { k: 'Estabilidad visual (CLS)', v: a['cumulative-layout-shift']?.displayValue || '—', s: pct({ score: a['cumulative-layout-shift']?.score }) },
           { k: 'Primer contenido (FCP)', v: a['first-contentful-paint']?.displayValue || '—', s: pct({ score: a['first-contentful-paint']?.score }) },
           { k: 'Tiempo bloqueado (TBT)', v: a['total-blocking-time']?.displayValue || '—', s: pct({ score: a['total-blocking-time']?.score }) }
-        ]
+        ],
+        weight: buildWeight(a)
       })
       setState('done')
     } catch (e2) {
@@ -92,6 +187,7 @@ export default function AuditaClient() {
       fd.append('email', email)
       fd.append('sitio_auditado', data.url)
       fd.append('resultados', `Velocidad ${data.scores.velocidad} · SEO ${data.scores.seo} · Accesibilidad ${data.scores.accesibilidad} · Buenas prácticas ${data.scores.practicas}`)
+      if (data.weight) fd.append('peso', `Total ${fmtBytes(data.weight.total)} · Imágenes ${fmtBytes(data.weight.groups.image)} · Video ${fmtBytes(data.weight.groups.media)}`)
       const r = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd })
       if (!r.ok) throw new Error()
       setLeadState('sent')
@@ -164,6 +260,9 @@ export default function AuditaClient() {
                 </div>
               ))}
             </div>
+
+            {/* peso de la página */}
+            <WeightPanel w={data.weight} />
 
             {/* CTA */}
             <div style={{ background: INK, color: PAPER, borderRadius: 24, padding: 'clamp(28px,4vw,44px)', marginTop: 36 }}>
